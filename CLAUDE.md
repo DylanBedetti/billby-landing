@@ -51,6 +51,7 @@ src/
 ## Tech stack versions (installed)
 
 - Vite 8 + React 19 + TypeScript 5.9
+- `src/test/setup.ts` globally mocks `IntersectionObserver` (class, no-op) so jsdom tests work with Framer Motion `whileInView` and `StatCounter`
 - Tailwind CSS v4 (CSS-based config via `@theme` directive in `src/index.css` — no `tailwind.config.js`)
 - shadcn/ui with nova preset (Radix-based, CSS variables enabled)
 - Framer Motion 12
@@ -78,6 +79,8 @@ macOS filesystem is case-insensitive: `Button.tsx` and `button.tsx` are the same
 - `NavBar.tsx` — sticky nav with wordmark, desktop anchor links, mobile hamburger drawer (Framer Motion)
 - `HeroSection.tsx` — full-viewport hero, two-column (copy left, card right), Framer Motion entrance animations
 - `AnimatedTimeEntryCard.tsx` (ui primitive) — loops through signals → processing → typewriter narrative; has Vitest + RTL tests
+- `ProblemSection.tsx` — three Clio Legal Trends stats (2.9hrs / 31% / 50%) in cards, Framer Motion fade-up entrance
+- `StatCounter.tsx` (ui primitive) — count-up animation via IntersectionObserver + rAF ease-out; has Vitest + RTL tests
 
 ## Key decisions
 
