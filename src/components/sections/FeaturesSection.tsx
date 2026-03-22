@@ -117,9 +117,9 @@ const features = [
     ),
   },
   {
-    title: 'Built for Australian firms',
+    title: 'Enterprise-ready security',
     description:
-      'All data stored in Australia. Designed to meet the compliance and data sovereignty requirements of Australian legal practice.',
+      'Data residency configuration, MDM deployment support, and compliance-ready infrastructure — built to satisfy the requirements of enterprise legal teams.',
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"

@@ -13,7 +13,7 @@ export function Footer() {
               <span className="text-violet-400">by</span>
             </div>
             <p className="text-white/60 text-sm leading-relaxed">
-              AI timekeeping for Australian law firms.
+              AI timekeeping for law firms.
             </p>
           </div>
 

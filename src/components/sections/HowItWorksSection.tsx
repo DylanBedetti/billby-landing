@@ -6,7 +6,7 @@ const steps = [
     number: 1,
     title: 'Runs silently in the background',
     description:
-      'Billby installs on macOS or Windows and tracks active applications, documents, and context throughout your day. No manual input. No browser extensions. No integrations to configure before you start.',
+      'Billby installs on Windows and tracks active applications, documents, and context throughout your day. No manual input. No browser extensions. No integrations to configure before you start.',
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -109,7 +109,7 @@ export function HowItWorksSection() {
 
           {/* Desktop connector line — sits behind the cards */}
           <div
-            className="hidden md:block absolute top-[52px] left-[calc(16.67%+1rem)] right-[calc(16.67%+1rem)] h-px border-t-2 border-dashed border-primary/30"
+            className="hidden md:block absolute top-4 left-[calc(16.67%+1rem)] right-[calc(16.67%+1rem)] h-px border-t-2 border-dashed border-primary/30"
             aria-hidden="true"
           />
 

@@ -4,15 +4,15 @@ import { SectionHeader, Accordion } from '@/components/ui'
 const faqItems = [
   {
     question: "Where is our data stored?",
-    answer: "All data for Australian firms is stored exclusively in Australia. We do not transfer, replicate, or process data on infrastructure outside Australia."
+    answer: "Billby provides data residency configuration, allowing your firm to control which region your data is stored in. We do not transfer or replicate data outside your configured region."
   },
   {
     question: "What data leaves the device?",
-    answer: "Activity signals and AI-processed time narratives are synced to the cloud. Contextual captures are processed to extract relevant information and are never shared with anyone outside your firm. All captures are permanently deleted after your timesheet is submitted."
+    answer: "Activity signals and AI-processed time narratives are synced to the cloud within your configured data residency region. Contextual captures are processed to extract relevant information and are never shared with anyone outside your firm. All captures are permanently deleted after your timesheet is submitted."
   },
   {
     question: "Can we deploy Billby via MDM?",
-    answer: "Yes. Billby supports MDM deployment across macOS and Windows, making firm-wide rollout straightforward for IT teams. We provide configuration profiles and documentation to support your rollout."
+    answer: "Yes. Billby supports MDM deployment on Windows, making firm-wide rollout straightforward for IT teams. We provide configuration profiles and documentation to support your rollout."
   },
   {
     question: "What AI model processes our data?",
@@ -32,7 +32,7 @@ const faqItems = [
   },
   {
     question: "Is Billby available for on-premises deployment?",
-    answer: "Billby is currently a cloud-hosted product. On-premises deployment is not available. All cloud infrastructure is hosted within Australia for Australian firms."
+    answer: "Billby is currently a cloud-hosted product. On-premises deployment is not available. Data residency configuration is available to ensure your data stays in your required region."
   }
 ]
 
