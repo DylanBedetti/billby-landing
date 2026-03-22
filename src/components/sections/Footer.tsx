@@ -79,7 +79,7 @@ export function Footer() {
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-white/50 text-sm">
-            © 2025 Billby Pty Ltd. All rights reserved.
+            © {new Date().getFullYear()} Billby Pty Ltd. All rights reserved.
           </p>
           <p className="text-white/50 text-sm">Built in Australia 🇦🇺</p>
         </div>
