@@ -5,7 +5,7 @@ const features = [
   {
     title: 'OS-level intelligence',
     description:
-      'Tracks every application, document, and context switch across your day. Works from day one — no plugins, no browser extensions, no integrations to set up before you start billing.',
+      'Tracks every application, document, and context switch across your day. Works from day one with no plugins, browser extensions, or integrations to configure.',
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +28,7 @@ const features = [
   {
     title: 'Contextual awareness',
     description:
-      'When Billby needs more context, it takes a brief, targeted look. Captures are infrequent, purposeful, and private to you — never shared with firm management or anyone else.',
+      'When Billby needs more context, it takes a brief, targeted look. Captures are infrequent, purposeful, and private to you. They are never shared with firm management or anyone else.',
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +50,7 @@ const features = [
   {
     title: 'AI-generated narratives',
     description:
-      'Not just durations. Billby writes detailed, accurate time entry descriptions that reflect exactly what you worked on — ready to bill without editing.',
+      'Not just durations. Billby writes detailed, accurate time entry descriptions that reflect exactly what you worked on, ready to bill without editing.',
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +72,7 @@ const features = [
   {
     title: 'End-of-day compilation',
     description:
-      'Every evening, your complete timesheet is waiting for you. Review, adjust if needed, and submit — in minutes, not hours of painful reconstruction.',
+      'Every evening, your complete timesheet is waiting for you. Review, adjust if needed, and submit. Takes minutes, not hours.',
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -119,7 +119,7 @@ const features = [
   {
     title: 'Enterprise-ready security',
     description:
-      'Data residency configuration, MDM deployment support, and compliance-ready infrastructure — built to satisfy the requirements of enterprise legal teams.',
+      'Data residency configuration, MDM deployment support, and compliance-ready infrastructure built for enterprise legal teams.',
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -154,7 +154,7 @@ export function FeaturesSection() {
           <SectionHeader
             eyebrow="Features"
             heading="Built for the way lawyers actually work"
-            subtext="No behaviour change required. Billby captures everything at the OS level — so your day is documented whether you think about it or not."
+            subtext="No behaviour change required. Billby captures everything at the OS level, so your day is documented whether you think about it or not."
           />
         </motion.div>
 

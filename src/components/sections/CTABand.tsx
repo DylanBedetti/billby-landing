@@ -15,7 +15,7 @@ export function CTABand() {
           Stop reconstructing your day. Start capturing it.
         </h2>
         <p className="text-white/80 text-lg mb-8 max-w-xl">
-          See how Billby works for your firm — book a 20-minute call with our team.
+          See how Billby works for your firm. Book a 20-minute call with our team.
         </p>
         <Button variant="white" size="lg" href="#book">
           Book a Call

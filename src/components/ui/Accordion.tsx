@@ -34,7 +34,7 @@ export function Accordion({ items, className }: AccordionProps) {
               <span>{item.question}</span>
               <span
                 className={cn(
-                  'ml-4 shrink-0 transition-transform duration-200',
+                  'ml-4 shrink-0 transition-transform duration-200 text-primary text-xl leading-none',
                   isOpen ? 'rotate-45' : 'rotate-0'
                 )}
                 aria-hidden="true"

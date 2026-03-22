@@ -22,6 +22,16 @@ export function NavBar() {
 
   const closeDrawer = () => setDrawerOpen(false)
 
+  const handleDrawerNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault()
+    setDrawerOpen(false)
+    // Wait for drawer close animation before scrolling
+    setTimeout(() => {
+      const target = document.querySelector(href)
+      if (target) target.scrollIntoView({ behavior: 'smooth' })
+    }, 220)
+  }
+
   return (
     <>
       <header
@@ -105,7 +115,7 @@ export function NavBar() {
                   <a
                     key={link.href}
                     href={link.href}
-                    onClick={closeDrawer}
+                    onClick={(e) => handleDrawerNavClick(e, link.href)}
                     className="text-sm text-muted-foreground hover:text-foreground py-2 transition-colors"
                   >
                     {link.label}

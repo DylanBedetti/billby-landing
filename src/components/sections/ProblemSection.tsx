@@ -7,7 +7,7 @@ const stats = [
     value: 2.9,
     decimals: 1,
     suffix: 'hrs',
-    label: 'Average billable hours logged per day — despite working far longer',
+    label: 'Average billable hours logged per day, despite working far longer',
   },
   {
     value: 31,
@@ -44,7 +44,7 @@ export function ProblemSection() {
           {stats.map((stat, i) => (
             <div
               key={i}
-              className="rounded-xl bg-card p-8 shadow-md"
+              className="rounded-xl bg-card p-8 shadow-md border-t-4 border-primary"
             >
               <StatCounter
                 value={stat.value}
@@ -61,8 +61,7 @@ export function ProblemSection() {
         </p>
 
         <p className="mt-8 text-center text-base text-muted-foreground max-w-2xl mx-auto">
-          For a lawyer billing at $450/hr, that's over $80,000 in unrealised revenue every year —
-          silently lost to the end-of-day struggle to remember what you did.
+          For a lawyer billing at $450/hr, that's over $80,000 in unrealised revenue every year. Silently lost to the end-of-day struggle to remember what you did.
         </p>
       </div>
     </motion.section>

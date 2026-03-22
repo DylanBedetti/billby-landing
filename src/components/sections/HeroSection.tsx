@@ -6,7 +6,7 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center bg-background px-4 sm:px-6 pt-24 md:pt-32 pb-20"
+      className="min-h-screen flex items-center px-4 sm:px-6 pt-24 md:pt-32 pb-20 bg-gradient-to-br from-violet-50 via-background to-background"
     >
       <div className="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         {/* Left column: copy */}

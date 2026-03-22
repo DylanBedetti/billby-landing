@@ -30,7 +30,7 @@ const steps = [
     number: 2,
     title: 'AI stitches your day together',
     description:
-      'Agentic AI correlates all signals into coherent, accurate time narratives — detailed enough to bill, specific enough to defend.',
+      'Agentic AI correlates all your signals into coherent, accurate time narratives that are detailed enough to bill and specific enough to defend.',
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
