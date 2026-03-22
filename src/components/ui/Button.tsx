@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils'
 
-type ButtonVariant = 'primary' | 'secondary' | 'ghost'
+type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'white'
 type ButtonSize = 'sm' | 'md' | 'lg'
 
 interface ButtonProps {
@@ -20,6 +20,8 @@ const variantClasses: Record<ButtonVariant, string> = {
     'border border-primary text-primary bg-transparent hover:bg-primary/5',
   ghost:
     'border-transparent text-primary bg-transparent hover:bg-primary/5',
+  white:
+    'bg-white text-primary hover:bg-white/90',
 }
 
 const sizeClasses: Record<ButtonSize, string> = {

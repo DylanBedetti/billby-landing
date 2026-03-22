@@ -3,6 +3,8 @@ import { ProblemSection } from '@/components/sections/ProblemSection'
 import { HowItWorksSection } from '@/components/sections/HowItWorksSection'
 import { FeaturesSection } from '@/components/sections/FeaturesSection'
 import { FAQSection } from '@/components/sections/FAQSection'
+import { CTABand } from '@/components/sections/CTABand'
+import { Footer } from '@/components/sections/Footer'
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <HowItWorksSection />
       <FeaturesSection />
       <FAQSection />
+      <CTABand />
+      <Footer />
     </div>
   )
 }
