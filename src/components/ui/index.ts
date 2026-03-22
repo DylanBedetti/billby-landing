@@ -1,5 +1,5 @@
 export { Accordion } from './Accordion'
 export type { AccordionItem, AccordionProps } from './Accordion'
-export { Button } from './button'
+export { Button } from './Button'
 export { SectionHeader } from './SectionHeader'
 export { FeatureCard } from './FeatureCard'
