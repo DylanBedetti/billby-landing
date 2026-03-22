@@ -2,6 +2,7 @@ import { HeroSection } from '@/components/sections/HeroSection'
 import { ProblemSection } from '@/components/sections/ProblemSection'
 import { HowItWorksSection } from '@/components/sections/HowItWorksSection'
 import { FeaturesSection } from '@/components/sections/FeaturesSection'
+import { FAQSection } from '@/components/sections/FAQSection'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <ProblemSection />
       <HowItWorksSection />
       <FeaturesSection />
+      <FAQSection />
     </div>
   )
 }

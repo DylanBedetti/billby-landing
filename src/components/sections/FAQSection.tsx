@@ -1,0 +1,69 @@
+import { motion } from 'framer-motion'
+import { SectionHeader, Accordion } from '@/components/ui'
+
+const faqItems = [
+  {
+    question: "Where is our data stored?",
+    answer: "All data for Australian firms is stored exclusively in Australia. We do not transfer, replicate, or process data on infrastructure outside Australia."
+  },
+  {
+    question: "What data leaves the device?",
+    answer: "Activity signals and AI-processed time narratives are synced to the cloud. Contextual captures are processed to extract relevant information and are never shared with anyone outside your firm. All captures are permanently deleted after your timesheet is submitted."
+  },
+  {
+    question: "Can we deploy Billby via MDM?",
+    answer: "Yes. Billby supports MDM deployment across macOS and Windows, making firm-wide rollout straightforward for IT teams. We provide configuration profiles and documentation to support your rollout."
+  },
+  {
+    question: "What AI model processes our data?",
+    answer: "We use enterprise-grade AI infrastructure with data processing agreements in place. Your firm's data is never used to train external models, and all processing occurs within our secured, sovereignty-compliant environment."
+  },
+  {
+    question: "What compliance certifications does Billby hold?",
+    answer: "We are actively pursuing SOC 2 Type II certification. We are happy to walk through our current security posture, controls, and roadmap in detail on a call."
+  },
+  {
+    question: "Can lawyers control when tracking is active?",
+    answer: "Yes. Tracking is entirely in each lawyer's control. They can pause or stop at any time from the menu bar icon. Firms cannot force tracking on — lawyer consent is built into the product."
+  },
+  {
+    question: "What happens to captures after the timesheet is submitted?",
+    answer: "All contextual captures are permanently and automatically deleted after the lawyer submits their timesheet. Nothing is retained. This is enforced at the infrastructure level, not just policy."
+  },
+  {
+    question: "Is Billby available for on-premises deployment?",
+    answer: "Billby is currently a cloud-hosted product. On-premises deployment is not available. All cloud infrastructure is hosted within Australia for Australian firms."
+  }
+]
+
+export function FAQSection() {
+  return (
+    <section id="faq" className="py-20 sm:py-28">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: 'easeOut' }}
+          viewport={{ once: true }}
+          className="mb-14 flex flex-col items-center"
+        >
+          <SectionHeader
+            eyebrow="Security & IT"
+            heading="Questions your IT team will ask"
+            subtext="We've designed Billby with enterprise security requirements in mind. Here are the answers to the questions we hear most."
+          />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: 'easeOut', delay: 0.1 }}
+          viewport={{ once: true }}
+          className="mx-auto max-w-[800px]"
+        >
+          <Accordion items={faqItems} />
+        </motion.div>
+      </div>
+    </section>
+  )
+}
