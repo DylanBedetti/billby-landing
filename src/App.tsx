@@ -1,7 +1,9 @@
+import { HeroSection } from '@/components/sections/HeroSection'
+
 function App() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
-      {/* Sections will be assembled here */}
+      <HeroSection />
     </div>
   )
 }
