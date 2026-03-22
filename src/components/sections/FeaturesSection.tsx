@@ -1,9 +1,11 @@
+import React from 'react'
 import { motion } from 'framer-motion'
 import { SectionHeader, FeatureCard } from '@/components/ui'
 
-const features = [
+const features: { title: string; description: string; iconClassName: string; icon: React.ReactNode }[] = [
   {
     title: 'OS-level intelligence',
+    iconClassName: 'bg-violet-100 text-violet-600',
     description:
       'Tracks every application, document, and context switch across your day. Works from day one with no plugins, browser extensions, or integrations to configure.',
     icon: (
@@ -27,6 +29,7 @@ const features = [
   },
   {
     title: 'Contextual awareness',
+    iconClassName: 'bg-emerald-100 text-emerald-600',
     description:
       'When Billby needs more context, it takes a brief, targeted look. Captures are infrequent, purposeful, and private to you. They are never shared with firm management or anyone else.',
     icon: (
@@ -49,6 +52,7 @@ const features = [
   },
   {
     title: 'AI-generated narratives',
+    iconClassName: 'bg-indigo-100 text-indigo-600',
     description:
       'Not just durations. Billby writes detailed, accurate time entry descriptions that reflect exactly what you worked on, ready to bill without editing.',
     icon: (
@@ -71,6 +75,7 @@ const features = [
   },
   {
     title: 'End-of-day compilation',
+    iconClassName: 'bg-amber-100 text-amber-600',
     description:
       'Every evening, your complete timesheet is waiting for you. Review, adjust if needed, and submit. Takes minutes, not hours.',
     icon: (
@@ -95,6 +100,7 @@ const features = [
   },
   {
     title: 'Billing software integration',
+    iconClassName: 'bg-sky-100 text-sky-600',
     description:
       'Submits directly to Clio, LEAP, Practice Evolve, and other leading platforms. Your existing workflow, automated.',
     icon: (
@@ -118,6 +124,7 @@ const features = [
   },
   {
     title: 'Enterprise-ready security',
+    iconClassName: 'bg-slate-100 text-slate-600',
     description:
       'Data residency configuration, MDM deployment support, and compliance-ready infrastructure built for enterprise legal teams.',
     icon: (
@@ -171,6 +178,7 @@ export function FeaturesSection() {
                 icon={feature.icon}
                 title={feature.title}
                 description={feature.description}
+                iconClassName={feature.iconClassName}
                 className="h-full"
               />
             </motion.div>

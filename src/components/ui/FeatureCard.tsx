@@ -5,9 +5,10 @@ interface FeatureCardProps {
   title: string
   description: string
   className?: string
+  iconClassName?: string
 }
 
-export function FeatureCard({ icon, title, description, className }: FeatureCardProps) {
+export function FeatureCard({ icon, title, description, className, iconClassName }: FeatureCardProps) {
   return (
     <div
       className={cn(
@@ -15,7 +16,7 @@ export function FeatureCard({ icon, title, description, className }: FeatureCard
         className,
       )}
     >
-      <div className="mb-4 inline-flex size-11 items-center justify-center rounded-xl bg-primary/10 text-primary">
+      <div className={cn('mb-4 inline-flex size-11 items-center justify-center rounded-xl', iconClassName ?? 'bg-primary/10 text-primary')}>
         {icon}
       </div>
       <h3 className="mb-2 text-base font-semibold text-foreground">{title}</h3>

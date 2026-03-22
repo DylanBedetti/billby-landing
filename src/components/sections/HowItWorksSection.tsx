@@ -4,6 +4,7 @@ import { SectionHeader } from '@/components/ui/SectionHeader'
 const steps = [
   {
     number: 1,
+    iconClassName: 'bg-violet-100 text-violet-600',
     title: 'Runs silently in the background',
     description:
       'Billby installs on Windows and tracks active applications, documents, and context throughout your day. No manual input. No browser extensions. No integrations to configure before you start.',
@@ -28,6 +29,7 @@ const steps = [
   },
   {
     number: 2,
+    iconClassName: 'bg-emerald-100 text-emerald-600',
     title: 'AI stitches your day together',
     description:
       'Agentic AI correlates all your signals into coherent, accurate time narratives that are detailed enough to bill and specific enough to defend.',
@@ -59,6 +61,7 @@ const steps = [
   },
   {
     number: 3,
+    iconClassName: 'bg-indigo-100 text-indigo-600',
     title: 'Review and submit',
     description:
       'At the end of the day, your complete timesheet is ready. Review, adjust if needed, and submit directly to Clio, LEAP, or your practice management platform.',
@@ -128,7 +131,7 @@ export function HowItWorksSection() {
               </div>
 
               {/* Icon */}
-              <div className="mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+              <div className={`mb-5 flex h-16 w-16 items-center justify-center rounded-2xl ${step.iconClassName}`}>
                 {step.icon}
               </div>
 
