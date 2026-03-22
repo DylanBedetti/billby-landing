@@ -73,6 +73,10 @@ macOS filesystem is case-insensitive: `Button.tsx` and `button.tsx` are the same
 
 - `vite.config.ts` uses `defineConfig` from `vitest/config` (not `vite`) so that the `test` block type-checks correctly
 
+## Sections built
+
+- `NavBar.tsx` — sticky nav with wordmark, desktop anchor links, mobile hamburger drawer (Framer Motion)
+
 ## Key decisions
 
 - Single-page app, no router — anchor-based navigation only
