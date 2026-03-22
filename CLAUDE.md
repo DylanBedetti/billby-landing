@@ -30,7 +30,9 @@ src/
   components/
     ui/          # Shared primitives (Button, SectionHeader, FeatureCard, Accordion)
     sections/    # One file per page section
-  lib/           # Utilities
+    shared/      # Cross-cutting shared components
+  lib/           # Utilities (cn helper etc.)
+  test/          # Test setup and smoke tests
   App.tsx        # Root — assembles all sections
   main.tsx       # Entry point
 ```
@@ -45,6 +47,26 @@ src/
 | Text primary | `#111827` — `text-foreground` |
 | Text muted | `#6B7280` — `text-muted-foreground` |
 | Card surface | `#FFFFFF` — `bg-card` |
+
+## Tech stack versions (installed)
+
+- Vite 8 + React 19 + TypeScript 5.9
+- Tailwind CSS v4 (CSS-based config via `@theme` directive in `src/index.css` — no `tailwind.config.js`)
+- shadcn/ui with nova preset (Radix-based, CSS variables enabled)
+- Framer Motion 12
+- Vitest 4 + React Testing Library 16
+
+## shadcn/ui notes
+
+- `components.json` is the shadcn config at project root
+- Add components with: `npx shadcn@latest add <component>`
+- Import alias `@/` maps to `src/` (configured in both `tsconfig.app.json` and `tsconfig.json`)
+- shadcn added `tw-animate-css` and `shadcn/tailwind.css` imports to `src/index.css` — do not remove
+- Font is Inter (loaded via Google Fonts in `index.html`), not Geist — the `--font-sans` theme var in `src/index.css` overrides shadcn's default
+
+## Vite config
+
+- `vite.config.ts` uses `defineConfig` from `vitest/config` (not `vite`) so that the `test` block type-checks correctly
 
 ## Key decisions
 
