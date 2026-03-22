@@ -6,7 +6,7 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center bg-background px-6 py-20"
+      className="min-h-screen flex items-center bg-background px-4 sm:px-6 pt-24 md:pt-32 pb-20"
     >
       <div className="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         {/* Left column: copy */}
@@ -22,7 +22,7 @@ export function HeroSection() {
           </p>
 
           {/* Headline */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-foreground">
             Every minute.{' '}
             <span className="text-primary">Captured.</span>{' '}
             Automatically.

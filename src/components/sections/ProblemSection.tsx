@@ -25,7 +25,7 @@ export function ProblemSection() {
   return (
     <motion.section
       id="problem"
-      className="bg-background py-20 px-4"
+      className="bg-background py-20 md:py-28 px-4"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.15 }}
