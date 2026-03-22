@@ -80,6 +80,7 @@ macOS filesystem is case-insensitive: `Button.tsx` and `button.tsx` are the same
 - `HeroSection.tsx` — full-viewport hero, two-column (copy left, card right), Framer Motion entrance animations
 - `AnimatedTimeEntryCard.tsx` (ui primitive) — loops through signals → processing → typewriter narrative; has Vitest + RTL tests
 - `ProblemSection.tsx` — three Clio Legal Trends stats (2.9hrs / 31% / 50%) in cards, Framer Motion fade-up entrance
+- `HowItWorksSection.tsx` — three-step process diagram (monitor / network / checkmark SVG icons), desktop horizontal layout with dashed connector, staggered Framer Motion entrance per step
 - `StatCounter.tsx` (ui primitive) — count-up animation via IntersectionObserver + rAF ease-out; has Vitest + RTL tests
 
 ## Key decisions
