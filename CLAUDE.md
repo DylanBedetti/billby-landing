@@ -63,6 +63,11 @@ src/
 - Import alias `@/` maps to `src/` (configured in both `tsconfig.app.json` and `tsconfig.json`)
 - shadcn added `tw-animate-css` and `shadcn/tailwind.css` imports to `src/index.css` — do not remove
 - Font is Inter (loaded via Google Fonts in `index.html`), not Geist — the `--font-sans` theme var in `src/index.css` overrides shadcn's default
+- shadcn installs `button.tsx` (lowercase); renamed to `shadcn-button.tsx` to avoid macOS case-insensitive collision with `Button.tsx`
+
+## File casing on macOS
+
+macOS filesystem is case-insensitive: `Button.tsx` and `button.tsx` are the same file to the OS and to TypeScript. Never create two `ui/` components that differ only in casing. shadcn components (lowercase) that conflict with project components (PascalCase) must be renamed (e.g. `shadcn-button.tsx`).
 
 ## Vite config
 
