@@ -76,6 +76,8 @@ macOS filesystem is case-insensitive: `Button.tsx` and `button.tsx` are the same
 ## Sections built
 
 - `NavBar.tsx` — sticky nav with wordmark, desktop anchor links, mobile hamburger drawer (Framer Motion)
+- `HeroSection.tsx` — full-viewport hero, two-column (copy left, card right), Framer Motion entrance animations
+- `AnimatedTimeEntryCard.tsx` (ui primitive) — loops through signals → processing → typewriter narrative; has Vitest + RTL tests
 
 ## Key decisions
 
