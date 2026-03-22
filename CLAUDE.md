@@ -91,3 +91,14 @@ macOS filesystem is case-insensitive: `Button.tsx` and `button.tsx` are the same
 - Screen capture must NOT be described as surveillance/recording/spying — use "contextual awareness" / "looks when it needs more context"
 - Privacy copy: screen captures are private to the individual lawyer, wiped after timesheet submission
 - Data sovereignty: all AU firm data stored in Australia — surface this in FAQ and Features
+
+## Page assembly conventions
+
+- `App.tsx` renders `<NavBar />` first, then all sections wrapped in `<div className="pt-16">` to clear the fixed nav
+- Section order: NavBar → Hero → Problem → HowItWorks → Features → FAQ → CTABand → Footer
+- All sections (except Hero and Footer) use `py-20 md:py-28` vertical padding
+- HeroSection uses `pt-24 md:pt-32 pb-20` to clear the fixed NavBar
+- Framer Motion `whileInView` animations use `transition={{ duration: 0.5, ease: 'easeOut' }}` for consistency
+- H1 in Hero: `text-5xl md:text-6xl lg:text-7xl`; H2 section headings: `text-3xl sm:text-4xl` (via SectionHeader)
+- Smooth scroll is set on `html` element in `index.css` via `scroll-behavior: smooth`
+- `index.html` title: "Billby — AI Timekeeping for Law Firms"; meta description set
