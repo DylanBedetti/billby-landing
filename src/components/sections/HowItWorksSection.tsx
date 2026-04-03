@@ -101,7 +101,7 @@ export function HowItWorksSection() {
       <div className="mx-auto max-w-5xl">
         <SectionHeader
           eyebrow="How it works"
-          heading="From activity to invoice — automatically"
+          heading="From activity to invoice, automatically"
           subtext="Billby captures work as it happens and turns it into complete, accurate time entries, ready to bill."
           align="center"
           className="mb-16"
