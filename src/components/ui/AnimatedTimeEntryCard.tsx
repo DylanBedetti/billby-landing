@@ -151,7 +151,7 @@ export function AnimatedTimeEntryCard() {
       {/* Footer badge */}
       <div className="px-5 py-3 bg-gray-50 border-t border-gray-100 flex items-center gap-2">
         <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#10B981]" />
-        <span className="text-xs text-[#6B7280]">AI-generated · ready for review</span>
+        <span className="text-xs text-[#6B7280]">Generated · ready for review</span>
       </div>
     </div>
   )
