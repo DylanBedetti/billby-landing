@@ -5,7 +5,7 @@ const steps = [
   {
     number: 1,
     iconClassName: 'bg-violet-100 text-violet-600',
-    title: 'Runs silently in the background as you work',
+    title: 'Runs in the background as you work',
     description:
       'Billby captures your work activity throughout the day, with no manual input required.',
     icon: (
