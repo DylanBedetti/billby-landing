@@ -20,7 +20,6 @@ export function CTABand() {
         <Button variant="white" size="lg" href="#book">
           Book a Call
         </Button>
-        <p className="mt-4 text-white/60 text-sm">No commitment. No credit card.</p>
       </motion.div>
     </section>
   )
