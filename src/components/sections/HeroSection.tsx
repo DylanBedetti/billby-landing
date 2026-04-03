@@ -35,9 +35,6 @@ export function HeroSection() {
             <Button variant="primary" size="lg" href="#book">
               Book a Call
             </Button>
-            <p className="text-sm text-muted-foreground">
-              Free 20-minute demo · No commitment
-            </p>
           </div>
         </motion.div>
 
