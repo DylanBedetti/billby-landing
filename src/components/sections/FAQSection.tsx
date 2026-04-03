@@ -8,7 +8,7 @@ const faqItems = [
   },
   {
     question: "What data leaves the device?",
-    answer: "Activity signals and AI-processed time narratives are synced to the cloud within your configured data residency region. Contextual captures are processed to extract relevant information and are never shared with anyone outside your firm. All captures are permanently deleted after your timesheet is submitted."
+    answer: "Activity signals and time narratives are synced to the cloud within your configured data residency region. Contextual captures are processed to extract relevant information and are never shared with anyone outside your firm. All captures are permanently deleted after your timesheet is submitted."
   },
   {
     question: "Can we deploy Billby via MDM?",

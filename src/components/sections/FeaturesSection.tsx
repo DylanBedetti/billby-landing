@@ -51,7 +51,7 @@ const features: { title: string; description: string; iconClassName: string; ico
     ),
   },
   {
-    title: 'AI-generated narratives',
+    title: 'Generated narratives',
     iconClassName: 'bg-indigo-100 text-indigo-600',
     description:
       'Not just durations. Billby writes detailed, accurate time entry descriptions that reflect exactly what you worked on, ready to bill without editing.',
