@@ -18,7 +18,7 @@ export function HeroSection() {
         >
           {/* Eyebrow */}
           <p className="text-sm font-semibold text-primary uppercase tracking-wide">
-            Automated Time Recording
+            Billing Intelligence
           </p>
 
           {/* Headline */}
