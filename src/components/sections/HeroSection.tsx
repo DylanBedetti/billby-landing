@@ -16,11 +16,6 @@ export function HeroSection() {
           transition={{ duration: 0.6, ease: 'easeOut' }}
           className="flex flex-col gap-6"
         >
-          {/* Eyebrow */}
-          <p className="text-sm font-semibold text-primary uppercase tracking-wide">
-            Billing Intelligence
-          </p>
-
           {/* Headline */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-foreground">
             Every billable minute.{' '}
