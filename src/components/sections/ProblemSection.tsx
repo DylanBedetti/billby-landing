@@ -17,7 +17,7 @@ const stats = [
   {
     value: 50,
     suffix: '%',
-    label: 'Of billable time lost when entries are reconstructed from memory',
+    label: 'Billable time lost when entries are reconstructed from memory',
   },
 ]
 
