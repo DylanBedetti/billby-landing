@@ -5,9 +5,9 @@ const steps = [
   {
     number: 1,
     iconClassName: 'bg-violet-100 text-violet-600',
-    title: 'Runs silently in the background',
+    title: 'Runs silently in the background as you work',
     description:
-      'Billby installs on Windows and tracks active applications, documents, and context throughout your day. No manual input. No browser extensions. No integrations to configure before you start.',
+      'Billby captures your work activity throughout the day, with no manual input required.',
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -30,9 +30,9 @@ const steps = [
   {
     number: 2,
     iconClassName: 'bg-emerald-100 text-emerald-600',
-    title: 'AI stitches your day together',
+    title: 'Generates detailed, accurate time entries',
     description:
-      'Agentic AI correlates all your signals into coherent, accurate time narratives that are detailed enough to bill and specific enough to defend.',
+      'Your work is automatically converted into structured, client-ready time entries with detailed narratives allocated to the correct matter.',
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -102,7 +102,7 @@ export function HowItWorksSection() {
         <SectionHeader
           eyebrow="How it works"
           heading="From activity to invoice — automatically"
-          subtext="Billby works in the background so you don't have to think about timekeeping at all."
+          subtext="Billby captures work as it happens and turns it into complete, accurate time entries, ready to bill."
           align="center"
           className="mb-16"
         />

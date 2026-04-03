@@ -7,12 +7,12 @@ const stats = [
     value: 2.9,
     decimals: 1,
     suffix: 'hrs',
-    label: 'Average billable hours logged per day, despite working far longer',
+    label: 'Average billable hours logged per day',
   },
   {
     value: 31,
     suffix: '%',
-    label: 'Share of work time that converts to collected revenue',
+    label: 'Share of time worked that is actually billed and collected',
   },
   {
     value: 50,
@@ -34,8 +34,8 @@ export function ProblemSection() {
       <div className="mx-auto max-w-5xl">
         <SectionHeader
           eyebrow="The hidden cost"
-          heading="How much are you leaving on the table?"
-          subtext="Lawyers work long hours. But manual timekeeping means a significant portion of that work never makes it onto an invoice."
+          heading="How much revenue are you leaving on the table?"
+          subtext="Lawyers work long hours. But much of that time never makes it onto an invoice."
           align="center"
           className="mb-14"
         />

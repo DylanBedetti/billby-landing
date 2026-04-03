@@ -18,21 +18,21 @@ export function HeroSection() {
         >
           {/* Eyebrow */}
           <p className="text-sm font-semibold text-primary uppercase tracking-wide">
-            AI-Powered Timekeeping
+            Automated Time Recording
           </p>
 
           {/* Headline */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-foreground">
-            Every minute.{' '}
+            Every billable minute.{' '}
             <span className="text-primary">Captured.</span>{' '}
             Automatically.
           </h1>
 
           {/* Subtext */}
           <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">
-            Billby runs silently in the background and uses AI to compile a
-            complete, accurate timesheet at the end of every day. No manual
-            entry. No reconstruction. No lost billables.
+            Billby captures work as it happens and creates complete, client-ready
+            time entries with detailed narratives. Reduce write-offs. Bill
+            faster. Recover lost revenue.
           </p>
 
           {/* CTA */}
