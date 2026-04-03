@@ -41,21 +41,14 @@ const steps = [
         className="h-10 w-10"
         aria-hidden="true"
       >
-        {/* Central node */}
-        <circle cx="24" cy="24" r="5" stroke="currentColor" strokeWidth="2.5" />
-        {/* Outer nodes */}
-        <circle cx="10" cy="14" r="3" stroke="currentColor" strokeWidth="2" />
-        <circle cx="38" cy="14" r="3" stroke="currentColor" strokeWidth="2" />
-        <circle cx="10" cy="34" r="3" stroke="currentColor" strokeWidth="2" />
-        <circle cx="38" cy="34" r="3" stroke="currentColor" strokeWidth="2" />
-        {/* Connecting lines */}
-        <line x1="13" y1="16" x2="20" y2="21" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-        <line x1="35" y1="16" x2="28" y2="21" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-        <line x1="13" y1="32" x2="20" y2="27" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-        <line x1="35" y1="32" x2="28" y2="27" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-        {/* Sparkle dots */}
-        <circle cx="24" cy="9" r="1.5" fill="currentColor" />
-        <circle cx="24" cy="39" r="1.5" fill="currentColor" />
+        {/* Clock face */}
+        <circle cx="24" cy="24" r="17" stroke="currentColor" strokeWidth="2.5" />
+        {/* Hour hand */}
+        <line x1="24" y1="24" x2="24" y2="13" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+        {/* Minute hand */}
+        <line x1="24" y1="24" x2="32" y2="30" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+        {/* Centre dot */}
+        <circle cx="24" cy="24" r="2" fill="currentColor" />
       </svg>
     ),
   },
