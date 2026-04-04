@@ -4,7 +4,7 @@ import { SectionHeader } from '@/components/ui/SectionHeader'
 const steps = [
   {
     number: 1,
-    iconClassName: 'bg-orange-100 text-orange-600',
+    iconClassName: 'bg-orange-100 text-orange-700',
     title: 'Runs in the background as you work',
     description:
       'Billby captures your work activity throughout the day, with no manual input required.',
@@ -29,7 +29,7 @@ const steps = [
   },
   {
     number: 2,
-    iconClassName: 'bg-amber-100 text-amber-600',
+    iconClassName: 'bg-sky-100 text-sky-700',
     title: 'Generates detailed, accurate time entries',
     description:
       'Your work is automatically converted into structured, client-ready time entries with detailed narratives allocated to the correct matter.',
@@ -54,7 +54,7 @@ const steps = [
   },
   {
     number: 3,
-    iconClassName: 'bg-yellow-100 text-yellow-700',
+    iconClassName: 'bg-emerald-100 text-emerald-700',
     title: 'Review and submit',
     description:
       'At the end of the day, your complete timesheet is ready. Review, adjust if needed, and submit directly to Clio, LEAP, or your practice management platform.',

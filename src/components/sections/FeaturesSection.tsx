@@ -5,7 +5,7 @@ import { SectionHeader, FeatureCard } from '@/components/ui'
 const features: { title: string; description: string; iconClassName: string; icon: React.ReactNode }[] = [
   {
     title: 'OS-level intelligence',
-    iconClassName: 'bg-orange-100 text-orange-600',
+    iconClassName: 'bg-orange-100 text-orange-700',
     description:
       'Tracks every application, document, and context switch across your day. Works from day one with no plugins, browser extensions, or integrations to configure.',
     icon: (
@@ -29,7 +29,7 @@ const features: { title: string; description: string; iconClassName: string; ico
   },
   {
     title: 'Contextual awareness',
-    iconClassName: 'bg-amber-100 text-amber-600',
+    iconClassName: 'bg-sky-100 text-sky-700',
     description:
       'When Billby needs more context, it takes a brief, targeted look. Captures are infrequent, purposeful, and private to you. They are never shared with firm management or anyone else.',
     icon: (
@@ -52,7 +52,7 @@ const features: { title: string; description: string; iconClassName: string; ico
   },
   {
     title: 'Generated narratives',
-    iconClassName: 'bg-yellow-100 text-yellow-700',
+    iconClassName: 'bg-indigo-100 text-indigo-700',
     description:
       'Not just durations. Billby writes detailed, accurate time entry descriptions that reflect exactly what you worked on, ready to bill without editing.',
     icon: (
@@ -75,7 +75,7 @@ const features: { title: string; description: string; iconClassName: string; ico
   },
   {
     title: 'End-of-day compilation',
-    iconClassName: 'bg-rose-100 text-rose-600',
+    iconClassName: 'bg-amber-100 text-amber-700',
     description:
       'Every evening, your complete timesheet is waiting for you. Review, adjust if needed, and submit. Takes minutes, not hours.',
     icon: (
@@ -100,7 +100,7 @@ const features: { title: string; description: string; iconClassName: string; ico
   },
   {
     title: 'Billing software integration',
-    iconClassName: 'bg-teal-100 text-teal-600',
+    iconClassName: 'bg-emerald-100 text-emerald-700',
     description:
       'Submits directly to Clio, LEAP, Practice Evolve, and other leading platforms. Your existing workflow, automated.',
     icon: (
