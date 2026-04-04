@@ -8,7 +8,6 @@ npm run build      # Production build
 npm run preview    # Preview production build
 npm run test       # Run Vitest (watch mode)
 npm run test:run   # Run Vitest once (CI mode)
-npm run lint       # ESLint
 ```
 
 ## Project context

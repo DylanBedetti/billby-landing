@@ -89,7 +89,6 @@ export function AnimatedTimeEntryCard() {
   useEffect(() => {
     runCycle()
     return clearAll
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
