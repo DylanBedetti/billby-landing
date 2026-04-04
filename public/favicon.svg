@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
   <!-- Violet rounded background -->
-  <rect width="32" height="32" rx="7" fill="#7C3AED"/>
+  <rect width="32" height="32" rx="7" fill="#F97316"/>
   <!-- Lowercase "b" lettermark in white -->
   <!-- Stem: full height -->
   <rect x="7" y="5" width="4.5" height="22" rx="2.25" fill="white"/>
