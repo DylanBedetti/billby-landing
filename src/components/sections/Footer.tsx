@@ -10,7 +10,7 @@ export function Footer() {
           <div className="flex flex-col gap-3">
             <div className="text-xl font-bold tracking-tight">
               <span className="text-white">bill</span>
-              <span className="text-violet-400">by</span>
+              <span className="text-orange-400">by</span>
             </div>
             <p className="text-white/60 text-sm leading-relaxed">
               Billing intelligence for law firms.

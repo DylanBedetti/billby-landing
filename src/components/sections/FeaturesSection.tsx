@@ -5,7 +5,7 @@ import { SectionHeader, FeatureCard } from '@/components/ui'
 const features: { title: string; description: string; iconClassName: string; icon: React.ReactNode }[] = [
   {
     title: 'OS-level intelligence',
-    iconClassName: 'bg-violet-100 text-violet-600',
+    iconClassName: 'bg-orange-100 text-orange-600',
     description:
       'Tracks every application, document, and context switch across your day. Works from day one with no plugins, browser extensions, or integrations to configure.',
     icon: (
@@ -29,7 +29,7 @@ const features: { title: string; description: string; iconClassName: string; ico
   },
   {
     title: 'Contextual awareness',
-    iconClassName: 'bg-emerald-100 text-emerald-600',
+    iconClassName: 'bg-amber-100 text-amber-600',
     description:
       'When Billby needs more context, it takes a brief, targeted look. Captures are infrequent, purposeful, and private to you. They are never shared with firm management or anyone else.',
     icon: (
@@ -52,7 +52,7 @@ const features: { title: string; description: string; iconClassName: string; ico
   },
   {
     title: 'Generated narratives',
-    iconClassName: 'bg-indigo-100 text-indigo-600',
+    iconClassName: 'bg-yellow-100 text-yellow-700',
     description:
       'Not just durations. Billby writes detailed, accurate time entry descriptions that reflect exactly what you worked on, ready to bill without editing.',
     icon: (
@@ -75,7 +75,7 @@ const features: { title: string; description: string; iconClassName: string; ico
   },
   {
     title: 'End-of-day compilation',
-    iconClassName: 'bg-amber-100 text-amber-600',
+    iconClassName: 'bg-rose-100 text-rose-600',
     description:
       'Every evening, your complete timesheet is waiting for you. Review, adjust if needed, and submit. Takes minutes, not hours.',
     icon: (
@@ -100,7 +100,7 @@ const features: { title: string; description: string; iconClassName: string; ico
   },
   {
     title: 'Billing software integration',
-    iconClassName: 'bg-sky-100 text-sky-600',
+    iconClassName: 'bg-teal-100 text-teal-600',
     description:
       'Submits directly to Clio, LEAP, Practice Evolve, and other leading platforms. Your existing workflow, automated.',
     icon: (
@@ -124,7 +124,7 @@ const features: { title: string; description: string; iconClassName: string; ico
   },
   {
     title: 'Enterprise-ready security',
-    iconClassName: 'bg-slate-100 text-slate-600',
+    iconClassName: 'bg-stone-100 text-stone-600',
     description:
       'Data residency configuration, MDM deployment support, and compliance-ready infrastructure built for enterprise legal teams.',
     icon: (
@@ -149,7 +149,7 @@ const features: { title: string; description: string; iconClassName: string; ico
 
 export function FeaturesSection() {
   return (
-    <section id="features" className="bg-violet-50/30 py-20 sm:py-28">
+    <section id="features" className="bg-orange-50/30 py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
