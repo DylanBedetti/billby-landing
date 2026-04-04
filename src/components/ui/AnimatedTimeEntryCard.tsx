@@ -97,16 +97,16 @@ export function AnimatedTimeEntryCard() {
       {/* Card header */}
       <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100">
         <div>
-          <p className="text-xs font-medium text-[#6B7280] uppercase tracking-wide">Matter</p>
-          <p className="text-sm font-semibold text-[#111827]">Smith v Jones</p>
+          <p className="text-xs font-medium text-muted-foreground uppercase tracking-wide">Matter</p>
+          <p className="text-sm font-semibold text-foreground">Smith v Jones</p>
         </div>
         <div className="text-center">
-          <p className="text-xs font-medium text-[#6B7280] uppercase tracking-wide">Client</p>
-          <p className="text-sm font-semibold text-[#111827]">Clayton &amp; Associates</p>
+          <p className="text-xs font-medium text-muted-foreground uppercase tracking-wide">Client</p>
+          <p className="text-sm font-semibold text-foreground">Clayton &amp; Associates</p>
         </div>
         <div className="text-right">
-          <p className="text-xs font-medium text-[#6B7280] uppercase tracking-wide">Duration</p>
-          <p className="text-sm font-semibold text-[#7C3AED]">1h 22m</p>
+          <p className="text-xs font-medium text-muted-foreground uppercase tracking-wide">Duration</p>
+          <p className="text-sm font-semibold text-primary">1h 22m</p>
         </div>
       </div>
 
@@ -117,7 +117,7 @@ export function AnimatedTimeEntryCard() {
             {SIGNALS.slice(0, visibleSignals).map((signal, i) => (
               <li
                 key={i}
-                className="font-mono text-xs text-[#6B7280] animate-in fade-in duration-300"
+                className="font-mono text-xs text-muted-foreground animate-in fade-in duration-300"
               >
                 {signal}
               </li>
@@ -126,9 +126,9 @@ export function AnimatedTimeEntryCard() {
         )}
 
         {phase === 'processing' && (
-          <div className="flex items-center gap-2 text-sm text-[#7C3AED] font-medium">
+          <div className="flex items-center gap-2 text-sm text-primary font-medium">
             <span
-              className="inline-block w-3 h-3 rounded-full border-2 border-[#7C3AED] border-t-transparent animate-spin"
+              className="inline-block w-3 h-3 rounded-full border-2 border-primary border-t-transparent animate-spin"
               aria-hidden="true"
             />
             <span>Analysing activity{'.'.repeat(dotCount)}</span>
@@ -137,12 +137,12 @@ export function AnimatedTimeEntryCard() {
 
         {(phase === 'narrative' || phase === 'done') && (
           <pre
-            className="text-sm text-[#111827] whitespace-pre-wrap font-sans leading-relaxed"
+            className="text-sm text-foreground whitespace-pre-wrap font-sans leading-relaxed"
             aria-label="AI narrative"
           >
             {narrative}
             {phase === 'narrative' && (
-              <span className="inline-block w-0.5 h-4 bg-[#7C3AED] ml-px align-middle animate-pulse" aria-hidden="true" />
+              <span className="inline-block w-0.5 h-4 bg-primary ml-px align-middle animate-pulse" aria-hidden="true" />
             )}
           </pre>
         )}
@@ -150,8 +150,8 @@ export function AnimatedTimeEntryCard() {
 
       {/* Footer badge */}
       <div className="px-5 py-3 bg-gray-50 border-t border-gray-100 flex items-center gap-2">
-        <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#10B981]" />
-        <span className="text-xs text-[#6B7280]">Generated · ready for review</span>
+        <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500" />
+        <span className="text-xs text-muted-foreground">Generated · ready for review</span>
       </div>
     </div>
   )
