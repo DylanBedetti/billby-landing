@@ -1,38 +1,40 @@
+import { cva, type VariantProps } from 'class-variance-authority'
 import { cn } from '@/lib/utils'
 
-type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'white'
-type ButtonSize = 'sm' | 'md' | 'lg'
+const buttonVariants = cva(
+  'inline-flex items-center justify-center font-medium rounded-lg transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/50',
+  {
+    variants: {
+      variant: {
+        primary: 'bg-primary text-white hover:opacity-90',
+        secondary: 'border border-primary text-primary bg-transparent hover:bg-primary/5',
+        ghost: 'border-transparent text-primary bg-transparent hover:bg-primary/5',
+        white: 'bg-white text-foreground hover:bg-white/90',
+      },
+      size: {
+        sm: 'px-3 py-1.5 text-sm',
+        md: 'px-5 py-2.5 text-sm',
+        lg: 'px-7 py-3.5 text-base',
+      },
+    },
+    defaultVariants: {
+      variant: 'primary',
+      size: 'md',
+    },
+  }
+)
 
-interface ButtonProps {
-  variant?: ButtonVariant
-  size?: ButtonSize
+interface ButtonProps extends VariantProps<typeof buttonVariants> {
   disabled?: boolean
-  onClick?: React.MouseEventHandler<HTMLButtonElement | HTMLAnchorElement>
+  onClick?: React.MouseEventHandler<HTMLElement>
   children: React.ReactNode
   className?: string
   href?: string
 }
 
-const variantClasses: Record<ButtonVariant, string> = {
-  primary:
-    'bg-primary text-white hover:opacity-90',
-  secondary:
-    'border border-primary text-primary bg-transparent hover:bg-primary/5',
-  ghost:
-    'border-transparent text-primary bg-transparent hover:bg-primary/5',
-  white:
-    'bg-white text-foreground hover:bg-white/90',
-}
-
-const sizeClasses: Record<ButtonSize, string> = {
-  sm: 'px-3 py-1.5 text-sm',
-  md: 'px-5 py-2.5 text-sm',
-  lg: 'px-7 py-3.5 text-base',
-}
-
-export function Button({
-  variant = 'primary',
-  size = 'md',
+function Button({
+  variant,
+  size,
   disabled = false,
   onClick,
   children,
@@ -40,9 +42,7 @@ export function Button({
   href,
 }: ButtonProps) {
   const classes = cn(
-    'inline-flex items-center justify-center font-medium rounded-lg transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50',
-    variantClasses[variant],
-    sizeClasses[size],
+    buttonVariants({ variant, size }),
     disabled && 'opacity-50 pointer-events-none',
     className,
   )
@@ -52,7 +52,7 @@ export function Button({
       <a
         href={href}
         className={classes}
-        onClick={disabled ? (e) => e.preventDefault() : (onClick as React.MouseEventHandler<HTMLAnchorElement>)}
+        onClick={disabled ? (e) => e.preventDefault() : onClick}
         aria-disabled={disabled}
       >
         {children}
@@ -65,9 +65,11 @@ export function Button({
       type="button"
       className={classes}
       disabled={disabled}
-      onClick={onClick as React.MouseEventHandler<HTMLButtonElement>}
+      onClick={onClick}
     >
       {children}
     </button>
   )
 }
+
+export { Button, buttonVariants }

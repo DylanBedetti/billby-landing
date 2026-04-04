@@ -1,4 +1,4 @@
-export { Button } from './Button'
+export { Button, buttonVariants } from './Button'
 export { SectionHeader } from './SectionHeader'
 export { FeatureCard } from './FeatureCard'
 export { AnimatedTimeEntryCard } from './AnimatedTimeEntryCard'
