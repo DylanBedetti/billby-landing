@@ -1,6 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
-
-type Phase = 'signals' | 'processing' | 'narrative' | 'done'
+import { useAnimationCycle } from '@/hooks/useAnimationCycle'
 
 const SIGNALS = [
   '09:02 — Microsoft Word — Affidavit_Smith_v_Jones_FINAL.docx',
@@ -15,81 +13,11 @@ Duration: 1h 22m
 
 Reviewed and revised affidavit in support of interlocutory injunction. Analysed settlement correspondence from opposing counsel. Prepared response strategy and updated client brief with recommended next steps.`
 
-// Delays (ms)
-const SIGNAL_ITEM_DELAY = 400   // time between each signal item appearing
-const SIGNALS_DISPLAY = 2000    // how long to show signals phase total
-const PROCESSING_DURATION = 800 // how long to show processing phase
-const TYPEWRITER_DELAY = 18     // ms per character
-const DONE_PAUSE = 2000         // pause after narrative completes before loop
-
 export function AnimatedTimeEntryCard() {
-  const [phase, setPhase] = useState<Phase>('signals')
-  const [visibleSignals, setVisibleSignals] = useState(0)
-  const [narrative, setNarrative] = useState('')
-  const [dotCount, setDotCount] = useState(1)
-  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
-  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null)
-
-  const clearAll = () => {
-    if (timeoutRef.current) clearTimeout(timeoutRef.current)
-    if (intervalRef.current) clearInterval(intervalRef.current)
-  }
-
-  const runCycle = () => {
-    // Reset state
-    setPhase('signals')
-    setVisibleSignals(0)
-    setNarrative('')
-    setDotCount(1)
-
-    // Phase 1: reveal signals one by one
-    let signalIndex = 0
-    const revealNextSignal = () => {
-      signalIndex++
-      setVisibleSignals(signalIndex)
-      if (signalIndex < SIGNALS.length) {
-        timeoutRef.current = setTimeout(revealNextSignal, SIGNAL_ITEM_DELAY)
-      } else {
-        // All signals shown, wait remaining time then move to processing
-        timeoutRef.current = setTimeout(() => {
-          setPhase('processing')
-
-          // Phase 2: processing — dot animation
-          let dots = 1
-          intervalRef.current = setInterval(() => {
-            dots = (dots % 3) + 1
-            setDotCount(dots)
-          }, 300)
-
-          timeoutRef.current = setTimeout(() => {
-            if (intervalRef.current) clearInterval(intervalRef.current)
-            setPhase('narrative')
-
-            // Phase 3: typewriter
-            let charIndex = 0
-            const typeNext = () => {
-              charIndex++
-              setNarrative(NARRATIVE.slice(0, charIndex))
-              if (charIndex < NARRATIVE.length) {
-                timeoutRef.current = setTimeout(typeNext, TYPEWRITER_DELAY)
-              } else {
-                setPhase('done')
-                timeoutRef.current = setTimeout(runCycle, DONE_PAUSE)
-              }
-            }
-            timeoutRef.current = setTimeout(typeNext, TYPEWRITER_DELAY)
-          }, PROCESSING_DURATION)
-        }, SIGNALS_DISPLAY - SIGNALS.length * SIGNAL_ITEM_DELAY)
-      }
-    }
-
-    timeoutRef.current = setTimeout(revealNextSignal, SIGNAL_ITEM_DELAY)
-  }
-
-  useEffect(() => {
-    runCycle()
-    return clearAll
-  }, [])
+  const { phase, visibleSignals, narrative, dotCount } = useAnimationCycle({
+    signals: SIGNALS,
+    narrative: NARRATIVE,
+  })
 
   return (
     <div className="bg-white rounded-2xl shadow-xl border border-gray-100 w-full max-w-lg overflow-hidden">
