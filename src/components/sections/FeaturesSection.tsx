@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { SectionHeader, FeatureCard } from '@/components/ui'
+import { SectionHeader } from '@/components/ui/SectionHeader'
+import { FeatureCard } from '@/components/ui/FeatureCard'
 
 const features: { title: string; description: string; iconClassName: string; icon: React.ReactNode }[] = [
   {

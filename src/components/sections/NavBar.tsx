@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { Button } from '@/components/ui'
+import { Button } from '@/components/ui/Button'
 
 const navLinks = [
   { label: 'How It Works', href: '#how-it-works' },
