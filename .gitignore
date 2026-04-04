@@ -22,3 +22,9 @@ dist/
 
 # Test coverage
 coverage/
+
+# Playwright MCP artifacts
+.playwright-mcp/
+
+# Misc
+og-preview.png
