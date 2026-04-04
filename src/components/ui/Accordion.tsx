@@ -1,69 +1,64 @@
-import { useState } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
-import { cn } from '@/lib/utils'
+import * as React from "react"
+import { ChevronDownIcon } from "lucide-react"
+import { Accordion as AccordionPrimitive } from "radix-ui"
 
-export interface AccordionItem {
-  question: string
-  answer: string
+import { cn } from "@/lib/utils"
+
+function Accordion({
+  ...props
+}: React.ComponentProps<typeof AccordionPrimitive.Root>) {
+  return <AccordionPrimitive.Root data-slot="accordion" {...props} />
 }
 
-export interface AccordionProps {
-  items: AccordionItem[]
-  className?: string
-}
-
-export function Accordion({ items, className }: AccordionProps) {
-  const [openIndex, setOpenIndex] = useState<number | null>(null)
-
-  function handleToggle(index: number) {
-    setOpenIndex(prev => (prev === index ? null : index))
-  }
-
+function AccordionItem({
+  className,
+  ...props
+}: React.ComponentProps<typeof AccordionPrimitive.Item>) {
   return (
-    <div className={cn('w-full', className)}>
-      {items.map((item, index) => {
-        const isOpen = openIndex === index
-        return (
-          <div key={index} className="border-b border-border">
-            <button
-              type="button"
-              onClick={() => handleToggle(index)}
-              aria-expanded={isOpen}
-              className="flex w-full items-center justify-between py-4 text-left font-medium text-foreground"
-            >
-              <span>{item.question}</span>
-              <span
-                className={cn(
-                  'ml-4 shrink-0 transition-transform duration-200 text-primary text-xl leading-none',
-                  isOpen ? 'rotate-45' : 'rotate-0'
-                )}
-                aria-hidden="true"
-              >
-                +
-              </span>
-            </button>
-            <AnimatePresence initial={false}>
-              {isOpen && (
-                <motion.div
-                  key="answer"
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: 'auto', opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.2 }}
-                  style={{ overflow: 'hidden' }}
-                >
-                  <div
-                    className="pb-4 text-muted-foreground"
-                    data-testid={`answer-${index}`}
-                  >
-                    {item.answer}
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-        )
-      })}
-    </div>
+    <AccordionPrimitive.Item
+      data-slot="accordion-item"
+      className={cn("border-b last:border-b-0", className)}
+      {...props}
+    />
   )
 }
+
+function AccordionTrigger({
+  className,
+  children,
+  ...props
+}: React.ComponentProps<typeof AccordionPrimitive.Trigger>) {
+  return (
+    <AccordionPrimitive.Header className="flex">
+      <AccordionPrimitive.Trigger
+        data-slot="accordion-trigger"
+        className={cn(
+          "flex flex-1 items-start justify-between gap-4 rounded-md py-4 text-left text-sm font-medium transition-all outline-none hover:underline focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 [&[data-state=open]>svg]:rotate-180",
+          className
+        )}
+        {...props}
+      >
+        {children}
+        <ChevronDownIcon className="pointer-events-none size-4 shrink-0 translate-y-0.5 text-muted-foreground transition-transform duration-200" />
+      </AccordionPrimitive.Trigger>
+    </AccordionPrimitive.Header>
+  )
+}
+
+function AccordionContent({
+  className,
+  children,
+  ...props
+}: React.ComponentProps<typeof AccordionPrimitive.Content>) {
+  return (
+    <AccordionPrimitive.Content
+      data-slot="accordion-content"
+      className="overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+      {...props}
+    >
+      <div className={cn("pt-0 pb-4", className)}>{children}</div>
+    </AccordionPrimitive.Content>
+  )
+}
+
+export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }

@@ -1,75 +1,79 @@
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { describe, it, expect } from 'vitest'
-import { Accordion } from './Accordion'
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from './accordion'
 
-const items = [
-  { question: 'Question one', answer: 'Answer one' },
-  { question: 'Question two', answer: 'Answer two' },
-  { question: 'Question three', answer: 'Answer three' },
-]
+function TestAccordion() {
+  return (
+    <Accordion type="single" collapsible>
+      <AccordionItem value="item-1">
+        <AccordionTrigger>Question one</AccordionTrigger>
+        <AccordionContent>Answer one</AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-2">
+        <AccordionTrigger>Question two</AccordionTrigger>
+        <AccordionContent>Answer two</AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-3">
+        <AccordionTrigger>Question three</AccordionTrigger>
+        <AccordionContent>Answer three</AccordionContent>
+      </AccordionItem>
+    </Accordion>
+  )
+}
 
 describe('Accordion', () => {
-  it('renders all questions from props', () => {
-    render(<Accordion items={items} />)
+  it('renders all questions', () => {
+    render(<TestAccordion />)
     expect(screen.getByText('Question one')).toBeInTheDocument()
     expect(screen.getByText('Question two')).toBeInTheDocument()
     expect(screen.getByText('Question three')).toBeInTheDocument()
   })
 
-  it('answer is not visible initially', () => {
-    render(<Accordion items={items} />)
-    // All buttons should start collapsed
-    const buttons = screen.getAllByRole('button')
-    buttons.forEach(button => {
-      expect(button).toHaveAttribute('aria-expanded', 'false')
+  it('answers are hidden initially', () => {
+    render(<TestAccordion />)
+    const triggers = screen.getAllByRole('button')
+    triggers.forEach(trigger => {
+      expect(trigger).toHaveAttribute('data-state', 'closed')
     })
-    // No answers rendered in DOM
-    expect(screen.queryByTestId('answer-0')).not.toBeInTheDocument()
-    expect(screen.queryByTestId('answer-1')).not.toBeInTheDocument()
   })
 
   it('clicking a question shows its answer', async () => {
     const user = userEvent.setup()
-    render(<Accordion items={items} />)
+    render(<TestAccordion />)
 
-    const button = screen.getByText('Question one').closest('button')!
-    await user.click(button)
+    await user.click(screen.getByText('Question one'))
 
-    expect(button).toHaveAttribute('aria-expanded', 'true')
-    expect(screen.getByTestId('answer-0')).toBeInTheDocument()
-    expect(screen.getByText('Answer one')).toBeInTheDocument()
+    expect(screen.getByText('Answer one')).toBeVisible()
   })
 
   it('clicking the same question again hides its answer', async () => {
     const user = userEvent.setup()
-    render(<Accordion items={items} />)
+    render(<TestAccordion />)
 
-    const button = screen.getByText('Question one').closest('button')!
+    const trigger = screen.getByText('Question one')
+    await user.click(trigger)
+    expect(trigger.closest('button')).toHaveAttribute('data-state', 'open')
 
-    await user.click(button)
-    expect(button).toHaveAttribute('aria-expanded', 'true')
-
-    await user.click(button)
-    // aria-expanded reflects closed state; Framer Motion may keep DOM during exit animation
-    expect(button).toHaveAttribute('aria-expanded', 'false')
+    await user.click(trigger)
+    expect(trigger.closest('button')).toHaveAttribute('data-state', 'closed')
   })
 
-  it('clicking a second question closes the first and opens the second', async () => {
+  it('clicking a second question closes the first', async () => {
     const user = userEvent.setup()
-    render(<Accordion items={items} />)
+    render(<TestAccordion />)
 
-    const button1 = screen.getByText('Question one').closest('button')!
-    const button2 = screen.getByText('Question two').closest('button')!
+    await user.click(screen.getByText('Question one'))
+    await user.click(screen.getByText('Question two'))
 
-    await user.click(button1)
-    expect(button1).toHaveAttribute('aria-expanded', 'true')
-
-    await user.click(button2)
-    // First question is now closed, second is open
-    expect(button1).toHaveAttribute('aria-expanded', 'false')
-    expect(button2).toHaveAttribute('aria-expanded', 'true')
-    expect(screen.getByTestId('answer-1')).toBeInTheDocument()
-    expect(screen.getByText('Answer two')).toBeInTheDocument()
+    const trigger1 = screen.getByText('Question one').closest('button')
+    const trigger2 = screen.getByText('Question two').closest('button')
+    expect(trigger1).toHaveAttribute('data-state', 'closed')
+    expect(trigger2).toHaveAttribute('data-state', 'open')
   })
 })

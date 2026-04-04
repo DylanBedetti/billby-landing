@@ -1,5 +1,11 @@
 import { motion } from 'framer-motion'
-import { SectionHeader, Accordion } from '@/components/ui'
+import { SectionHeader } from '@/components/ui'
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion'
 
 const faqItems = [
   {
@@ -61,7 +67,14 @@ export function FAQSection() {
           viewport={{ once: true }}
           className="mx-auto max-w-[800px]"
         >
-          <Accordion items={faqItems} />
+          <Accordion type="single" collapsible className="w-full">
+            {faqItems.map((item, index) => (
+              <AccordionItem key={index} value={`item-${index}`}>
+                <AccordionTrigger>{item.question}</AccordionTrigger>
+                <AccordionContent>{item.answer}</AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </motion.div>
       </div>
     </section>
