@@ -113,9 +113,9 @@ export function AnimatedTimeEntryCard() {
       <div className="px-5 py-4 min-h-[160px]">
         {(phase === 'signals') && (
           <ul className="space-y-1.5" aria-label="activity signals">
-            {SIGNALS.slice(0, visibleSignals).map((signal, i) => (
+            {SIGNALS.slice(0, visibleSignals).map((signal) => (
               <li
-                key={i}
+                key={signal}
                 className="font-mono text-xs text-muted-foreground animate-in fade-in duration-300"
               >
                 {signal}

@@ -1,9 +1,9 @@
-import React from 'react'
+import type { ReactNode } from 'react'
 import { motion } from 'framer-motion'
 import { SectionHeader } from '@/components/ui/SectionHeader'
 import { FeatureCard } from '@/components/ui/FeatureCard'
 
-const features: { title: string; description: string; iconClassName: string; icon: React.ReactNode }[] = [
+const features: { title: string; description: string; iconClassName: string; icon: ReactNode }[] = [
   {
     title: 'OS-level intelligence',
     iconClassName: 'bg-orange-100 text-orange-700',

@@ -41,9 +41,9 @@ export function ProblemSection() {
         />
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
-          {stats.map((stat, i) => (
+          {stats.map((stat) => (
             <div
-              key={i}
+              key={stat.label}
               className="rounded-xl bg-card p-8 shadow-md border-t-4 border-primary"
             >
               <StatCounter
