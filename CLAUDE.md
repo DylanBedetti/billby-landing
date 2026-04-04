@@ -41,26 +41,27 @@ src/
 
 | Token | Value |
 |-------|-------|
-| Background | `#FAFAFA` — `bg-background` |
-| Primary accent | `#7C3AED` — `bg-primary` / `text-primary` |
-| Secondary accent | `#10B981` — `bg-secondary` / `text-secondary` |
-| Text primary | `#111827` — `text-foreground` |
-| Text muted | `#6B7280` — `text-muted-foreground` |
-| Card surface | `#FFFFFF` — `bg-card` |
+| Background | `hsl(0 0% 100%)` — `bg-background` |
+| Primary accent | `hsl(24.6 95% 53.1%)` — `bg-primary` / `text-primary` (orange) |
+| Secondary | `hsl(60 4.8% 95.9%)` — `bg-secondary` / `text-secondary` |
+| Text primary | `hsl(20 14.3% 4.1%)` — `text-foreground` |
+| Text muted | `hsl(25 5.3% 44.7%)` — `text-muted-foreground` |
+| Card surface | `hsl(0 0% 100%)` — `bg-card` |
 
 ## Tech stack versions (installed)
 
 - Vite 8 + React 19 + TypeScript 5.9
 - `src/test/setup.ts` globally mocks `IntersectionObserver` (class, no-op) so jsdom tests work with Framer Motion `whileInView` and `StatCounter`
 - Tailwind CSS v4 (CSS-based config via `@theme` directive in `src/index.css` — no `tailwind.config.js`)
-- shadcn/ui with nova preset (Radix-based, CSS variables enabled)
+- shadcn/ui with new-york style, orange/neutral base (Radix-based, CSS variables in HSL)
 - Framer Motion 12
 - Vitest 4 + React Testing Library 16
 
 ## shadcn/ui notes
 
-- `components.json` is the shadcn config at project root
+- `components.json` is the shadcn config at project root (new-york style, neutral base)
 - Add components with: `npx shadcn@latest add <component>`
+- Installed shadcn components: `accordion.tsx`, `card.tsx`, `shadcn-button.tsx`
 - Import alias `@/` maps to `src/` (configured in both `tsconfig.app.json` and `tsconfig.json`)
 - shadcn added `tw-animate-css` and `shadcn/tailwind.css` imports to `src/index.css` — do not remove
 - Font is Inter (loaded via Google Fonts in `index.html`), not Geist — the `--font-sans` theme var in `src/index.css` overrides shadcn's default
