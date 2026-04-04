@@ -13,7 +13,13 @@ npm run lint       # ESLint
 
 ## Project context
 
-See README.md for full product context, design system, and page structure.
+Landing page for **Billby** — AI-powered timekeeping for Australian law firms. Live at [billby.com.au](https://billby.com.au).
+
+Billby installs on a lawyer's laptop and tracks work via OS-level signals (active app, window titles) and contextual screen capture. An agentic AI produces detailed time narratives and a complete timesheet at end of day.
+
+**Target audience:** Managing Partners, Technical Directors at AU law firms (buyers); individual lawyers (end users).
+
+Pre-launch — no customers yet, no pricing published. Primary goal: capture "Book a Call" leads.
 
 ## Conventions
 
@@ -102,4 +108,4 @@ macOS filesystem is case-insensitive: `Button.tsx` and `button.tsx` are the same
 - Framer Motion `whileInView` animations use `transition={{ duration: 0.5, ease: 'easeOut' }}` for consistency
 - H1 in Hero: `text-5xl md:text-6xl lg:text-7xl`; H2 section headings: `text-3xl sm:text-4xl` (via SectionHeader)
 - Smooth scroll is set on `html` element in `index.css` via `scroll-behavior: smooth`
-- `index.html` title: "Billby — AI Timekeeping for Law Firms"; meta description set
+- `index.html` title: "Billby — Billing Intelligence for Law Firms"; meta description set
