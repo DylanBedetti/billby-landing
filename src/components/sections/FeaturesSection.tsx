@@ -5,10 +5,10 @@ import { FeatureCard } from '@/components/ui/FeatureCard'
 
 const features: { title: string; description: string; iconClassName: string; icon: ReactNode }[] = [
   {
-    title: 'OS-level intelligence',
+    title: 'Automatic capture',
     iconClassName: 'bg-orange-100 text-orange-700',
     description:
-      'Tracks every application, document, and context switch across your day. Works from day one with no plugins, browser extensions, or integrations to configure.',
+      'Tracks every application, document, and context switch across your day. Works from day one with no plugins or browser extensions. Optional integrations can improve accuracy further, but Billby works out of the box.',
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -29,10 +29,10 @@ const features: { title: string; description: string; iconClassName: string; ico
     ),
   },
   {
-    title: 'Contextual awareness',
+    title: 'Understands your work',
     iconClassName: 'bg-sky-100 text-sky-700',
     description:
-      'When Billby needs more context, it takes a brief, targeted look. Captures are infrequent, purposeful, and private to you. They are never shared with firm management or anyone else.',
+      'Billby captures your workflow across the tools you use, enabling highly accurate time entries without manual input.',
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -52,10 +52,10 @@ const features: { title: string; description: string; iconClassName: string; ico
     ),
   },
   {
-    title: 'Generated narratives',
+    title: 'Ready-to-bill entries',
     iconClassName: 'bg-indigo-100 text-indigo-700',
     description:
-      'Not just durations. Billby writes detailed, accurate time entry descriptions that reflect exactly what you worked on, ready to bill without editing.',
+      'Billby writes detailed, accurate time entries that reflect your work and demonstrate its value to clients, linked to the right matter and ready to bill.',
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -75,10 +75,10 @@ const features: { title: string; description: string; iconClassName: string; ico
     ),
   },
   {
-    title: 'End-of-day compilation',
+    title: 'Timesheets done in minutes',
     iconClassName: 'bg-amber-100 text-amber-700',
     description:
-      'Every evening, your complete timesheet is waiting for you. Review, adjust if needed, and submit. Takes minutes, not hours.',
+      'At the end of your day, your complete timesheet is ready. Review, edit if needed, and submit in minutes, with no end-of-day scramble.',
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -100,10 +100,10 @@ const features: { title: string; description: string; iconClassName: string; ico
     ),
   },
   {
-    title: 'Billing software integration',
+    title: 'Works with your systems',
     iconClassName: 'bg-emerald-100 text-emerald-700',
     description:
-      'Submits directly to Clio, LEAP, Practice Evolve, and other leading platforms. Your existing workflow, automated.',
+      'Billby integrates with your existing billing and practice management tools, so time entries flow straight into your current workflow.',
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -127,7 +127,7 @@ const features: { title: string; description: string; iconClassName: string; ico
     title: 'Enterprise-ready security',
     iconClassName: 'bg-stone-100 text-stone-600',
     description:
-      'Data residency configuration, MDM deployment support, and compliance-ready infrastructure built for enterprise legal teams.',
+      'Designed for legal confidentiality. Data is siloed and encrypted, not used to train models, and handled in line with firm and client requirements.',
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -161,8 +161,8 @@ export function FeaturesSection() {
         >
           <SectionHeader
             eyebrow="Features"
-            heading="Built for the way lawyers actually work"
-            subtext="No behaviour change required. Billby captures everything at the OS level, so your day is documented whether you think about it or not."
+            heading="Billby handles time recording, so lawyers can focus on the work"
+            subtext="No timers, no reconstruction, no behaviour change required. Just your work, captured automatically, accurately and ready to bill."
           />
         </motion.div>
 

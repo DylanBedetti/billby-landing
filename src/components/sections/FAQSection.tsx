@@ -10,11 +10,11 @@ import {
 const faqItems = [
   {
     question: "Where is our data stored?",
-    answer: "Billby provides data residency configuration, allowing your firm to control which region your data is stored in. We do not transfer or replicate data outside your configured region."
+    answer: "Billby stores data in Australia. Data is not transferred or stored outside Australia."
   },
   {
     question: "What data leaves the device?",
-    answer: "Activity signals and time narratives are synced to the cloud within your configured data residency region. Contextual captures are processed to extract relevant information and are never shared with anyone outside your firm. All captures are permanently deleted after your timesheet is submitted."
+    answer: "Activity data and generated time entries are synced to the cloud. Contextual captures are processed to extract relevant information and are never shared with anyone outside your firm. All captures and activity data are permanently deleted after your timesheet is submitted, or at end of day (whichever comes earlier). Data is never used to train models or accessible by third parties."
   },
   {
     question: "Can we deploy Billby via MDM?",
@@ -25,20 +25,36 @@ const faqItems = [
     answer: "We use enterprise-grade AI infrastructure with data processing agreements in place. Your firm's data is never used to train external models, and all processing occurs within our secured, sovereignty-compliant environment."
   },
   {
-    question: "What compliance certifications does Billby hold?",
-    answer: "We are actively pursuing SOC 2 Type II certification. We are happy to walk through our current security posture, controls, and roadmap in detail on a call."
+    question: "How does Billby approach security and compliance?",
+    answer: "We're actively working towards SOC 2 Type II. Billby is already designed to meet the same security standards, with data isolation, encryption, and strict controls around how data is used."
   },
   {
     question: "Can lawyers control when tracking is active?",
-    answer: "Yes. Tracking is entirely in each lawyer's control. They can pause or stop at any time from the menu bar icon. Firms cannot force tracking on — lawyer consent is built into the product."
+    answer: "Yes. Tracking is always under the lawyer's control. It can be paused or stopped at any time."
   },
   {
     question: "What happens to captures after the timesheet is submitted?",
-    answer: "All contextual captures are permanently and automatically deleted after the lawyer submits their timesheet. Nothing is retained. This is enforced at the infrastructure level, not just policy."
+    answer: "All contextual captures are automatically deleted after the timesheet is submitted. Nothing is retained, and deletion is enforced at the infrastructure level."
   },
   {
     question: "Is Billby available for on-premises deployment?",
-    answer: "Billby is currently a cloud-hosted product. On-premises deployment is not available. Data residency configuration is available to ensure your data stays in your required region."
+    answer: "Billby is a cloud-hosted product and is not available for on-premises deployment. Data is stored in Australia and not transferred outside the region."
+  },
+  {
+    question: "How long is data retained?",
+    answer: "Contextual captures are not retained and are deleted after processing. Generated time entries are retained as part of your firm's records."
+  },
+  {
+    question: "Who can access our data?",
+    answer: "Access to data is restricted and tightly controlled. It is not accessible to other customers or third parties, and is not used for model training. Any access by Billby is limited to what's required to operate and support the service."
+  },
+  {
+    question: "Does Billby access or store client documents?",
+    answer: "Billby does not store client documents. Content is processed only where needed to generate time entries, and captures are not retained."
+  },
+  {
+    question: "Can certain matters or applications be excluded?",
+    answer: "Yes. Billby can be configured to exclude specific applications or workflows, giving firms control over what is captured, and lawyers can turn Billby off at any time."
   }
 ]
 
@@ -56,7 +72,7 @@ export function FAQSection() {
           <SectionHeader
             eyebrow="Security & IT"
             heading="Questions your IT team will ask"
-            subtext="We've designed Billby with enterprise security requirements in mind. Here are the answers to the questions we hear most."
+            subtext="We've designed Billby with enterprise security requirements in mind. Here are the answers on how Billby handles data, security, and deployment."
           />
         </motion.div>
 
