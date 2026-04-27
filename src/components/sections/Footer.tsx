@@ -51,7 +51,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className={linkClasses}>
+                <a href={BOOK_A_CALL_URL} target="_blank" rel="noopener noreferrer" className={linkClasses}>
                   Contact
                 </a>
               </li>
