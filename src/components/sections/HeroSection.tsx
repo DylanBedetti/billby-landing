@@ -18,12 +18,7 @@ export function HeroSection() {
         >
           {/* Headline */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold leading-tight text-foreground">
-            <span className="block whitespace-nowrap">
-              Capture more time.
-            </span>
-            <span className="block whitespace-nowrap">
-              Generate more revenue.
-            </span>
+            Capture more time. Generate more revenue.
           </h1>
 
           {/* Subtext */}
