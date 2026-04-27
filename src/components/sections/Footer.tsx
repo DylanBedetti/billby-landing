@@ -77,10 +77,7 @@ export function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-white/50 text-sm">
-            © {new Date().getFullYear()} Billby Pty Ltd. All rights reserved.
-          </p>
+        <div className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-end">
           <p className="text-white/50 text-sm">Built in Australia 🇦🇺</p>
         </div>
       </div>
