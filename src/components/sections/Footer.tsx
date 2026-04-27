@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer className="w-full bg-foreground text-white">
       <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {/* Column 1 — Brand */}
           <div className="flex flex-col gap-3">
             <div className="text-xl font-bold tracking-tight">
@@ -56,22 +56,6 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Column 4 — Legal */}
-          <div>
-            <p className={headingClasses}>Legal</p>
-            <ul className="flex flex-col gap-2">
-              <li>
-                <a href="#" className={linkClasses}>
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a href="#" className={linkClasses}>
-                  Terms of Service
-                </a>
-              </li>
-            </ul>
-          </div>
         </div>
       </div>
 
