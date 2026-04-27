@@ -17,9 +17,13 @@ export function HeroSection() {
           className="flex flex-col gap-6"
         >
           {/* Headline */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-foreground">
-            Capture <span className="text-primary">more time</span>.{' '}
-            Bill <span className="text-primary">more revenue</span>.
+          <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold leading-tight text-foreground">
+            <span className="block whitespace-nowrap">
+              Capture more time.
+            </span>
+            <span className="block whitespace-nowrap">
+              Generate more revenue.
+            </span>
           </h1>
 
           {/* Subtext */}
