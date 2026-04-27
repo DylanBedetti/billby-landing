@@ -1,3 +1,5 @@
+import { BOOK_A_CALL_URL } from '@/lib/links'
+
 export function Footer() {
   const linkClasses = 'text-white/60 hover:text-white transition-colors text-sm'
   const headingClasses = 'text-white/50 text-xs font-semibold uppercase tracking-wider mb-3'
@@ -32,7 +34,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#book" className={linkClasses}>
+                <a href={BOOK_A_CALL_URL} target="_blank" rel="noopener noreferrer" className={linkClasses}>
                   Book a Call
                 </a>
               </li>

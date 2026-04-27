@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Button } from '@/components/ui/Button'
+import { BOOK_A_CALL_URL } from '@/lib/links'
 
 const navLinks = [
   { label: 'How It Works', href: '#how-it-works' },
@@ -62,7 +63,7 @@ export function NavBar() {
 
             {/* Desktop CTA */}
             <div className="hidden md:block">
-              <Button variant="white" size="sm" href="#book">
+              <Button variant="white" size="sm" href={BOOK_A_CALL_URL} target="_blank">
                 Book a Call
               </Button>
             </div>
@@ -120,7 +121,7 @@ export function NavBar() {
                   </a>
                 ))}
                 <div className="pt-2">
-                  <Button variant="primary" size="sm" href="#book" onClick={closeDrawer} className="w-full justify-center">
+                  <Button variant="primary" size="sm" href={BOOK_A_CALL_URL} target="_blank" onClick={closeDrawer} className="w-full justify-center">
                     Book a Call
                   </Button>
                 </div>

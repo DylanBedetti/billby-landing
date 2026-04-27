@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/Button'
 import { AnimatedTimeEntryCard } from '@/components/ui/AnimatedTimeEntryCard'
+import { BOOK_A_CALL_URL } from '@/lib/links'
 
 export function HeroSection() {
   return (
@@ -30,7 +31,7 @@ export function HeroSection() {
 
           {/* CTA */}
           <div className="flex flex-col gap-3 items-start">
-            <Button variant="primary" size="lg" href="#book">
+            <Button variant="primary" size="lg" href={BOOK_A_CALL_URL} target="_blank">
               Book a Call
             </Button>
           </div>

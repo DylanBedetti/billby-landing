@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/Button'
+import { BOOK_A_CALL_URL } from '@/lib/links'
 
 export function CTABand() {
   return (
@@ -17,7 +18,7 @@ export function CTABand() {
         <p className="text-white/80 text-lg mb-8 max-w-xl">
           See how Billby works for your firm. Book a 20-minute call with our team.
         </p>
-        <Button variant="white" size="lg" href="#book">
+        <Button variant="white" size="lg" href={BOOK_A_CALL_URL} target="_blank">
           Book a Call
         </Button>
       </motion.div>

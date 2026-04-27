@@ -30,6 +30,8 @@ interface ButtonProps extends VariantProps<typeof buttonVariants> {
   children: React.ReactNode
   className?: string
   href?: string
+  target?: string
+  rel?: string
 }
 
 function Button({
@@ -40,6 +42,8 @@ function Button({
   children,
   className,
   href,
+  target,
+  rel,
 }: ButtonProps) {
   const classes = cn(
     buttonVariants({ variant, size }),
@@ -48,9 +52,12 @@ function Button({
   )
 
   if (href) {
+    const computedRel = target === '_blank' ? rel ?? 'noopener noreferrer' : rel
     return (
       <a
         href={href}
+        target={target}
+        rel={computedRel}
         className={classes}
         onClick={disabled ? (e) => e.preventDefault() : onClick}
         aria-disabled={disabled}
