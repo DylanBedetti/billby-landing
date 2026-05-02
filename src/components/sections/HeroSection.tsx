@@ -32,11 +32,12 @@ export function HeroSection() {
         </motion.div>
 
         {/* Product demo */}
+        {/* Desktop / tablet: embedded demo */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut', delay: 0.15 }}
-          className="relative w-full"
+          className="relative w-full hidden md:block"
         >
           {/* Background glow */}
           <div
@@ -57,6 +58,23 @@ export function HeroSection() {
               className="w-full h-full border-0"
             />
           </div>
+        </motion.div>
+
+        {/* Mobile: link to interactive demo */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: 'easeOut', delay: 0.15 }}
+          className="md:hidden"
+        >
+          <Button
+            variant="secondary"
+            size="lg"
+            href="https://billby.navattic.com/7at0v35?g=cmonxqd11000a04jofbgb626p&s=0"
+            target="_blank"
+          >
+            View interactive demo
+          </Button>
         </motion.div>
       </div>
     </section>
