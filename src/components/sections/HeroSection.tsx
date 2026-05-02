@@ -1,48 +1,42 @@
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/Button'
-import { AnimatedTimeEntryCard } from '@/components/ui/AnimatedTimeEntryCard'
 import { BOOK_A_CALL_URL } from '@/lib/links'
 
 export function HeroSection() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center px-4 sm:px-6 pt-24 md:pt-32 pb-20 bg-background"
+      className="px-4 sm:px-6 pt-24 md:pt-32 pb-20 bg-background"
     >
-      <div className="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-        {/* Left column: copy */}
+      <div className="max-w-6xl mx-auto w-full flex flex-col items-center gap-12 md:gap-16">
+        {/* Headline + subtext + CTA */}
         <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
-          className="flex flex-col gap-6"
+          className="flex flex-col gap-6 items-center text-center max-w-3xl"
         >
-          {/* Headline */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold leading-tight text-foreground">
             Capture more time. Generate more revenue.
           </h1>
 
-          {/* Subtext */}
-          <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">
+          <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">
             Billby captures work as it happens and creates complete, client-ready
             time entries with detailed narratives. Reduce write-offs. Bill
             faster. Recover lost revenue.
           </p>
 
-          {/* CTA */}
-          <div className="flex flex-col gap-3 items-start">
-            <Button variant="primary" size="lg" href={BOOK_A_CALL_URL} target="_blank">
-              Book a Call
-            </Button>
-          </div>
+          <Button variant="primary" size="lg" href={BOOK_A_CALL_URL} target="_blank">
+            Book a Call
+          </Button>
         </motion.div>
 
-        {/* Right column: animated card */}
+        {/* Product demo */}
         <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut', delay: 0.15 }}
-          className="flex justify-center items-center relative"
+          className="relative w-full"
         >
           {/* Background glow */}
           <div
@@ -54,8 +48,14 @@ export function HeroSection() {
             aria-hidden="true"
           />
 
-          <div className="relative w-full">
-            <AnimatedTimeEntryCard />
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/5 bg-card">
+            <iframe
+              src="https://capture.navattic.com/cmonxpklo000a04jv4mg084qk"
+              data-navattic-demo-id="cmonxpklo000a04jv4mg084qk"
+              allow="fullscreen"
+              title="Billby product demo"
+              className="w-full h-full border-0"
+            />
           </div>
         </motion.div>
       </div>
