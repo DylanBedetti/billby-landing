@@ -171,7 +171,7 @@ export function ValueCalculatorSection() {
               {showAssumptions && (
                 <div className="mt-5 flex flex-col gap-6">
                   <Slider
-                    label="Minutes a day on timesheets today"
+                    label="Daily Average Minutes spent on timesheets"
                     value={inputs.adminMinutesPerDay}
                     min={0}
                     max={60}
