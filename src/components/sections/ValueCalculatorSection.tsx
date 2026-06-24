@@ -208,15 +208,6 @@ export function ValueCalculatorSection() {
                     onChange={(v) => set({ writeOffReductionRate: v })}
                     format={(v) => `${Math.round(v * 100)}%`}
                   />
-                  <Slider
-                    label="Billable working days per year"
-                    value={inputs.workingDaysPerYear}
-                    min={180}
-                    max={260}
-                    step={5}
-                    onChange={(v) => set({ workingDaysPerYear: v })}
-                    format={(v) => `${v} days`}
-                  />
                 </div>
               )}
             </div>
