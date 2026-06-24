@@ -207,7 +207,7 @@ export function ValueCalculatorSection() {
                     step={0.05}
                     onChange={(v) => set({ writeOffReductionRate: v })}
                     format={(v) => `${Math.round(v * 100)}%`}
-                    hint="This is how much of that loss Billby claws back — because detailed, contemporaneous, guideline-compliant narratives survive partner review and client scrutiny."
+                    hint="This is how much of that loss Billby claws back, because detailed, contemporaneous, guideline-compliant narratives survive partner review and client scrutiny."
                   />
                 </div>
               )}
