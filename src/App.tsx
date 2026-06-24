@@ -14,8 +14,8 @@ function App() {
       <NavBar />
       <div className="pt-16">
         <HeroSection />
-        <ProblemSection />
         <ValueCalculatorSection />
+        <ProblemSection />
         <HowItWorksSection />
         <FeaturesSection />
         <FAQSection />
