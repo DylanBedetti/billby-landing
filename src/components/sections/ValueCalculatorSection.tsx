@@ -116,7 +116,7 @@ export function ValueCalculatorSection() {
               <Slider
                 label="Number of Fee Earners"
                 value={inputs.feeEarners}
-                min={1}
+                min={5}
                 max={200}
                 step={1}
                 onChange={(v) => set({ feeEarners: v })}

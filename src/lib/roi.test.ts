@@ -30,9 +30,9 @@ describe('calculateRoi', () => {
     )
     expect(r.perFeeEarnerValue).toBeCloseTo(r.totalAnnualValue / 20, 0)
 
-    // cost: 20 fee earners * $100 * 12 months
-    expect(r.annualCost).toBe(24_000)
-    expect(r.netAnnualValue).toBeCloseTo(r.totalAnnualValue - 24_000, 0)
+    // cost: 20 fee earners * $150 * 12 months
+    expect(r.annualCost).toBe(36_000)
+    expect(r.netAnnualValue).toBeCloseTo(r.totalAnnualValue - 36_000, 0)
   })
 
   it('scales linearly with fee earners', () => {
