@@ -62,7 +62,14 @@ export interface RoiBreakdown {
   hoursReclaimedPerYear: number
   /** The firm's current annual billings, for context. */
   annualBillings: number
+  /** Estimated annual Billby subscription cost across all fee earners. */
+  annualCost: number
+  /** totalAnnualValue minus annualCost — the firm's net gain. */
+  netAnnualValue: number
 }
+
+/** Indicative Billby list price, AUD per fee earner per month. */
+export const MONTHLY_PRICE_PER_FEE_EARNER = 100
 
 export const DEFAULT_ROI_INPUTS: RoiInputs = {
   feeEarners: 20,
@@ -112,6 +119,8 @@ export function calculateRoi(inputs: RoiInputs): RoiBreakdown {
   const totalAnnualValue =
     reclaimedAdminValue + recoveredBillableValue + reducedWriteOffValue
 
+  const annualCost = feeEarners * MONTHLY_PRICE_PER_FEE_EARNER * 12
+
   return {
     reclaimedAdminValue,
     recoveredBillableValue,
@@ -120,6 +129,8 @@ export function calculateRoi(inputs: RoiInputs): RoiBreakdown {
     perFeeEarnerValue: feeEarners > 0 ? totalAnnualValue / feeEarners : 0,
     hoursReclaimedPerYear: reclaimedAdminHoursPerYear,
     annualBillings,
+    annualCost,
+    netAnnualValue: totalAnnualValue - annualCost,
   }
 }
 
