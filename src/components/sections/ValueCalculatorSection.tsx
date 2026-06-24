@@ -282,15 +282,16 @@ export function ValueCalculatorSection() {
               </ul>
             </div>
 
-            <p className="mt-auto pt-7 text-sm leading-relaxed text-white/60">
-              Estimated Billby cost{' '}
+            <div className="mt-auto pt-7">
+              <p className="text-sm font-medium text-white/70">
+                Estimated Billby cost per year
+              </p>
               <AnimatedNumber
                 value={result.annualCost}
                 format={formatCurrency}
-                className="font-semibold text-white/80"
-              />{' '}
-              per year, at $100 per fee earner each month.
-            </p>
+                className="mt-1 block text-3xl font-bold tracking-tight sm:text-4xl"
+              />
+            </div>
 
             <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <p className="text-xs text-white/50">
