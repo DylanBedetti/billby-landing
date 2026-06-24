@@ -61,7 +61,7 @@ const DRIVERS = [
     key: 'recoveredBillableValue' as const,
     label: 'Recovered billable hours',
     swatch: 'bg-primary',
-    blurb: 'Work that today slips through — captured and billed.',
+    blurb: 'Work that slips through today, now captured and billed.',
   },
   {
     key: 'reclaimedAdminValue' as const,
@@ -71,7 +71,7 @@ const DRIVERS = [
   },
   {
     key: 'reducedWriteOffValue' as const,
-    label: 'Reduced write-offs',
+    label: 'Revenue protected',
     swatch: 'bg-amber-300',
     blurb: 'Detailed, compliant narratives mean fewer disputes.',
   },
@@ -100,7 +100,7 @@ export function ValueCalculatorSection() {
         <SectionHeader
           eyebrow="What Billby is worth"
           heading="See what Billby could add to your firm"
-          subtext="Drag the sliders to match your firm. Every figure is an estimate you can tune — adjust the assumptions to be as conservative as you like."
+          subtext="Drag the sliders to match your firm. Every figure is an estimate you can tune, so adjust the assumptions to be as conservative as you like."
           align="center"
           className="mb-12"
         />
@@ -114,7 +114,7 @@ export function ValueCalculatorSection() {
 
             <div className="flex flex-col gap-6">
               <Slider
-                label="Fee earners"
+                label="Number of Fee Earners"
                 value={inputs.feeEarners}
                 min={1}
                 max={200}
@@ -187,10 +187,10 @@ export function ValueCalculatorSection() {
                     step={0.01}
                     onChange={(v) => set({ captureUpliftRate: v })}
                     format={(v) => `${Math.round(v * 100)}%`}
-                    hint="Uplift on hours billed — work already done that today goes unrecorded."
+                    hint="Uplift on hours billed. Work already done that today goes unrecorded."
                   />
                   <Slider
-                    label="Current write-off rate"
+                    label="Revenue written off today"
                     value={inputs.currentWriteOffRate}
                     min={0}
                     max={0.25}
@@ -200,7 +200,7 @@ export function ValueCalculatorSection() {
                     hint="Share of billed value never collected today."
                   />
                   <Slider
-                    label="Write-offs Billby prevents"
+                    label="Share Billby recovers"
                     value={inputs.writeOffReductionRate}
                     min={0}
                     max={0.6}
@@ -298,13 +298,6 @@ export function ValueCalculatorSection() {
             </div>
           </div>
         </div>
-
-        {/* Pre-billing kicker */}
-        <p className="mx-auto mt-8 max-w-2xl text-center text-sm text-muted-foreground">
-          And this doesn't even count end-of-month pre-billing — the scramble to
-          reconstruct and clean up a month of entries that Billby turns into a
-          quick review.
-        </p>
       </div>
     </motion.section>
   )
