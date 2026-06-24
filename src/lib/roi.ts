@@ -69,7 +69,7 @@ export interface RoiBreakdown {
 }
 
 /** Indicative Billby list price, AUD per fee earner per month. */
-export const MONTHLY_PRICE_PER_FEE_EARNER = 150
+export const MONTHLY_PRICE_PER_FEE_EARNER = 200
 
 export const DEFAULT_ROI_INPUTS: RoiInputs = {
   feeEarners: 20,
