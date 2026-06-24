@@ -223,21 +223,6 @@ export function ValueCalculatorSection() {
               format={formatCurrency}
               className="mt-1 block text-4xl font-bold tracking-tight sm:text-5xl"
             />
-            <p className="mt-3 text-sm leading-relaxed text-white/60">
-              After Billby (about{' '}
-              <AnimatedNumber
-                value={result.annualCost}
-                format={formatCurrency}
-                className="font-semibold text-white/80"
-              />{' '}
-              a year, at $100 per fee earner each month), your firm nets{' '}
-              <AnimatedNumber
-                value={result.netAnnualValue}
-                format={formatCurrency}
-                className="font-semibold text-primary"
-              />
-              .
-            </p>
 
             <div className="mt-5 grid grid-cols-2 gap-4">
               <div className="rounded-xl bg-white/5 p-4">
@@ -297,7 +282,17 @@ export function ValueCalculatorSection() {
               </ul>
             </div>
 
-            <div className="mt-auto flex flex-col gap-3 pt-7 sm:flex-row sm:items-center sm:justify-between">
+            <p className="mt-auto pt-7 text-sm leading-relaxed text-white/60">
+              Estimated Billby cost{' '}
+              <AnimatedNumber
+                value={result.annualCost}
+                format={formatCurrency}
+                className="font-semibold text-white/80"
+              />{' '}
+              per year, at $100 per fee earner each month.
+            </p>
+
+            <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <p className="text-xs text-white/50">
                 Estimate only, based on your inputs. Not a guarantee.
               </p>
