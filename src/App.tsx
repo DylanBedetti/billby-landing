@@ -1,6 +1,7 @@
 import { NavBar } from '@/components/sections/NavBar'
 import { HeroSection } from '@/components/sections/HeroSection'
 import { ProblemSection } from '@/components/sections/ProblemSection'
+import { ValueCalculatorSection } from '@/components/sections/ValueCalculatorSection'
 import { HowItWorksSection } from '@/components/sections/HowItWorksSection'
 import { FeaturesSection } from '@/components/sections/FeaturesSection'
 import { FAQSection } from '@/components/sections/FAQSection'
@@ -13,6 +14,7 @@ function App() {
       <NavBar />
       <div className="pt-16">
         <HeroSection />
+        <ValueCalculatorSection />
         <ProblemSection />
         <HowItWorksSection />
         <FeaturesSection />
