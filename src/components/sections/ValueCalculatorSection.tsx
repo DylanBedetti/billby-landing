@@ -197,7 +197,7 @@ export function ValueCalculatorSection() {
                     step={0.01}
                     onChange={(v) => set({ currentWriteOffRate: v })}
                     format={(v) => `${Math.round(v * 100)}%`}
-                    hint="Share of billed value never collected today."
+                    hint="Work that gets recorded and invoiced, but is written down by the partner due to poor narration, or disputed by a client."
                   />
                   <Slider
                     label="Share Billby recovers"
@@ -207,6 +207,7 @@ export function ValueCalculatorSection() {
                     step={0.05}
                     onChange={(v) => set({ writeOffReductionRate: v })}
                     format={(v) => `${Math.round(v * 100)}%`}
+                    hint="This is how much of that loss Billby claws back — because detailed, contemporaneous, guideline-compliant narratives survive partner review and client scrutiny."
                   />
                 </div>
               )}
