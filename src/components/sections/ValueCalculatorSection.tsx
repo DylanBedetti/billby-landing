@@ -296,6 +296,7 @@ export function ValueCalculatorSection() {
             <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <p className="text-xs text-white/50">
                 Estimate only for illustrative purposes based on your inputs.
+                <br />
                 Not a guarantee.
               </p>
               <Button
