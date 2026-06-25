@@ -22,8 +22,7 @@ export function HeroSection() {
 
           <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">
             Billby captures work as it happens and creates complete, client-ready
-            time entries with detailed narratives. Reduce write-offs. Bill
-            faster. Recover lost revenue.
+            time entries with detailed narratives.
           </p>
 
           <Button variant="primary" size="lg" href={BOOK_A_CALL_URL} target="_blank">
