@@ -285,7 +285,7 @@ export function ValueCalculatorSection() {
 
             <div className="mt-auto pt-7">
               <p className="text-sm font-medium text-white/70">
-                Estimated Billby cost per year
+                Example Billby cost per year*
               </p>
               <AnimatedNumber
                 value={result.annualCost}
@@ -295,17 +295,18 @@ export function ValueCalculatorSection() {
             </div>
 
             <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-              <p className="text-xs text-white/50">
-                Estimate only for illustrative purposes based on your inputs.
+              <p className="text-xs text-white/50 sm:flex-1">
+                *Estimate only for illustrative purposes based on your inputs.
                 <br />
-                Not a guarantee.
+                Not a guarantee. For a tailored assessment and pricing quote,
+                please book a call.
               </p>
               <Button
                 variant="primary"
                 size="md"
                 href={BOOK_A_CALL_URL}
                 target="_blank"
-                className="w-full justify-center sm:w-auto"
+                className="w-full justify-center whitespace-nowrap sm:w-auto sm:shrink-0"
               >
                 Book a Call
               </Button>
