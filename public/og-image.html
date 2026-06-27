@@ -21,8 +21,8 @@
     /* Subtle radial glow */
     .glow {
       position: absolute;
-      width: 700px;
-      height: 700px;
+      width: 820px;
+      height: 820px;
       border-radius: 50%;
       background: radial-gradient(ellipse at center, rgba(249,115,22,0.25) 0%, transparent 70%);
       top: 50%;
@@ -36,39 +36,16 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 28px;
+      gap: 36px;
       text-align: center;
-      padding: 0 80px;
-    }
-
-    /* Badge */
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(249,115,22,0.15);
-      border: 1px solid rgba(249,115,22,0.35);
-      border-radius: 100px;
-      padding: 6px 16px;
-      font-size: 13px;
-      font-weight: 600;
-      color: #fb923c;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-
-    .badge-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: #F97316;
+      padding: 0 64px;
     }
 
     /* Wordmark */
     .wordmark {
-      font-size: 88px;
+      font-size: 132px;
       font-weight: 800;
-      letter-spacing: -3px;
+      letter-spacing: -5px;
       line-height: 1;
       color: #ffffff;
     }
@@ -77,23 +54,33 @@
       color: #F97316;
     }
 
-    /* Tagline */
-    .tagline {
-      font-size: 24px;
-      font-weight: 400;
-      color: rgba(255,255,255,0.55);
-      line-height: 1.4;
-      max-width: 640px;
+    /* Copy block */
+    .copy {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
     }
 
-    .tagline strong {
-      color: rgba(255,255,255,0.85);
+    .headline {
+      font-size: 46px;
       font-weight: 600;
+      color: rgba(255,255,255,0.92);
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+    }
+
+    .subhead {
+      font-size: 30px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.35;
+      max-width: 1040px;
     }
 
     /* Bottom domain pill */
     .domain {
-      font-size: 15px;
+      font-size: 22px;
       font-weight: 500;
       color: rgba(255,255,255,0.3);
       letter-spacing: 0.02em;
@@ -103,12 +90,11 @@
 <body>
   <div class="glow"></div>
   <div class="container">
-    <div class="badge">
-      <div class="badge-dot"></div>
-      Billing Intelligence
-    </div>
     <div class="wordmark">bill<span>by</span></div>
-    <p class="tagline">Every billable minute. <strong>Captured.</strong> Automatically.<br>Billing intelligence for law firms.</p>
+    <div class="copy">
+      <div class="headline">Hands-off timekeeping for law firms.</div>
+      <div class="subhead">Every billable minute captured automatically and ready to invoice.</div>
+    </div>
     <div class="domain">billby.com.au</div>
   </div>
 </body>
